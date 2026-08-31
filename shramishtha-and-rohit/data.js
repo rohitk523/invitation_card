@@ -34,6 +34,11 @@ const SITE = {
       note: "[sample] A bouquet, both families, and smiles that wouldn't sit still.",
     },
     {
+      date: "2026",
+      title: "The venue hunt begins",
+      note: "A trip to Fort View Adventure Resort, scouting where forever might start. (tell me the date)",
+    },
+    {
       date: "13 September 2026",
       title: "Saakharpuda",
       note: "The ring, the promise, the beginning — Hotel NeelKamal, Beed.",
@@ -76,6 +81,7 @@ const SITE = {
     { src: "photos/p6.jpg", caption: "That smile, mid-laugh" },
     { src: "photos/p7.jpg", caption: "An evening with family" },
     { src: "photos/p8.jpg", caption: "Us, simply" },
+    { src: "photos/p9.jpg", caption: "Fort View Adventure Resort — hunting for where forever begins" },
   ],
 
   usAlbum: [
@@ -96,6 +102,7 @@ const SITE = {
   places: [
     { name: "The coffee-connect café", note: "[sample] its real name goes here" },
     { name: "Beed", note: "where the yes happened" },
+    { name: "Fort View Adventure Resort", note: "the marriage-destination-finding trip" },
     { name: "Next place", note: "[sample] every trip we take gets added" },
   ],
 
