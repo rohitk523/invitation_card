@@ -35,6 +35,11 @@ const SITE = {
     },
     {
       date: "2026",
+      title: "The families said yes",
+      note: "Both homes, elders and cousins together — the day the wedding was finalized. (tell me the date)",
+    },
+    {
+      date: "2026",
       title: "The venue hunt begins",
       note: "A trip to Fort View Adventure Resort, scouting where forever might start. (tell me the date)",
     },
@@ -74,6 +79,9 @@ const SITE = {
       { src: "photos/with-family/f1.jpg", caption: "A garden walk with Aai" },
       { src: "photos/with-family/f2.jpg", caption: "Aai, Baba & her — one happy frame" },
       { src: "photos/with-family/f3.jpg", caption: "Her birthday lunch, with her family" },
+      { src: "photos/with-family/f4.jpg", caption: "The cousins' squad — wedding-finalization day" },
+      { src: "photos/with-family/f5.jpg", caption: "Both families, one decision" },
+      { src: "photos/with-family/f6.jpg", caption: "Blessings all around" },
     ],
   },
 
