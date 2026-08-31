@@ -71,6 +71,7 @@ function renderTickets() {
       ${ticketPoster(m)}
       <h3 class="ticket-title">${m.title}</h3>
       <p class="ticket-date">${m.date}</p>
+      ${m.venue ? `<p class="ticket-venue">${m.venue}</p>` : ""}
       <p class="ticket-note">${m.note}</p>
       ${ticketPhoto(m)}
     </article>`).join("");
@@ -99,9 +100,12 @@ function openFamily() {
   $("polaroids").innerHTML = polaroids(SITE.familyAlbum);
   $("with-family-line").textContent = SITE.withFamily.line;
   $("with-family-polaroids").innerHTML = polaroids(SITE.withFamily.photos);
+  $("fixing-day-line").textContent = SITE.fixingDay.line;
+  $("fixing-day-polaroids").innerHTML = polaroids(SITE.fixingDay.photos);
   renderTickets();
   $("gallery").hidden = false;
   $("with-family").hidden = false;
+  $("fixing-day").hidden = false;
   $("us-gate").hidden = flag.get(US_KEY);
   $("gate-card").hidden = true;
   $("gate-open").hidden = false;

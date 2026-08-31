@@ -161,6 +161,7 @@ a { color: #7C2E48; }
 .ticket-seat { font-size: 10px; letter-spacing: .2em; color: #B08D57; }
 .ticket-title { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 21px; margin: 8px 0 2px; color: #46323A; }
 .ticket-date { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #B08D57; }
+.ticket-venue { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #8A6B74; margin: 3px 0 0; }
 .ticket-note { font-family: "Caveat", cursive; font-size: 18.5px; color: #6E5560; margin: 10px 0 0; line-height: 1.4; }
 .ticket-photo { margin-top: 12px; border-radius: 8px; overflow: hidden; }
 .ticket-poster { margin: 12px 0 6px; border-radius: 8px; overflow: hidden; }
