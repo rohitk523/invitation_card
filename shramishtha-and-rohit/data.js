@@ -46,7 +46,7 @@ const SITE = {
       title: "Hai Jawani Toh Ishq Hona Hai",
       date: "2026",
       venue: "Anjali Cinema Hall · Sambhajinagar",
-      note: "Which day was this? The memory line goes here.",
+      note: "Perfect seats, perfect time. Also the site of a major scientific discovery: hands side by side, she turned out to be moonlight and I'm double-roast coffee. We're calling it contrast — it's what makes a photo good.",
       poster: "photos/poster-hjtihh.jpg",
       photo: null,
     },
