@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>text overlay</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@500;600&display=swap">
+<style>
+  /* Transparent overlay, rendered frame-by-frame at 720x1280. */
+  html, body { margin: 0; background: transparent; }
+  .frame { position: relative; width: 720px; height: 1280px; overflow: hidden; }
+
+  svg { display: block; width: 720px; height: 1280px; }
+  .script  { font-family: "Great Vibes", cursive; }
+  .caps    { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600;
+             letter-spacing: .32em; text-transform: uppercase; }
+  .caps-sm { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500;
+             letter-spacing: .26em; text-transform: uppercase; }
+
+  .rv { opacity: 0; }
+  .rv-fade { animation: fadeUp 1.4s cubic-bezier(.22,.61,.36,1) forwards; transform-box: fill-box; }
+  #line-script { animation: fadeIn .01s linear forwards; animation-delay: 1s; }
+  #script-wipe { animation: wipe 2.3s cubic-bezier(.4,0,.3,1) forwards; animation-delay: 1s; }
+  #line-eyebrow { animation-delay: 3.7s; }
+  #line-names { animation: nameIn 1.6s cubic-bezier(.22,.61,.36,1) forwards; animation-delay: 5.1s;
+                transform-box: fill-box; transform-origin: center; }
+  #line-invite { animation-delay: 6.9s; }
+  #line-date   { animation-delay: 8.1s; }
+  #line-time   { animation-delay: 9.5s; }
+  #line-venue  { animation-delay: 10.9s; }
+
+  @keyframes fadeIn { to { opacity: 1; } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); }
+                      to   { opacity: 1; transform: translateY(0); } }
+  @keyframes nameIn { from { opacity: 0; transform: scale(.92); }
+                      to   { opacity: 1; transform: scale(1); } }
+  @keyframes wipe { from { width: 0; } to { width: 640px; } }
+</style>
+</head>
+<body>
+<div class="frame">
+  <svg viewBox="0 0 720 1280">
+    <defs>
+      <clipPath id="scriptClip"><rect id="script-wipe" x="40" y="395" width="0" height="85"/></clipPath>
+    </defs>
+
+    <g id="line-script" class="rv">
+      <g clip-path="url(#scriptClip)">
+        <text class="script" x="360" y="452" font-size="50" text-anchor="middle" fill="#96733F">The beginning of forever</text>
+      </g>
+    </g>
+
+    <text id="line-eyebrow" class="rv rv-fade caps" x="360" y="508" font-size="25"
+          fill="#7C3A2C" text-anchor="middle">Engagement Ceremony</text>
+
+    <g id="line-names" class="rv">
+      <text class="script" x="360" y="594" font-size="68" text-anchor="middle" fill="#8A6234">Aarav &amp; Anaya</text>
+      <path d="M 250 618 q 110 20 220 0" fill="none" stroke="#C3A368" stroke-width="1.6"/>
+      <circle cx="360" cy="628" r="3" fill="#C3A368"/>
+    </g>
+
+    <text id="line-invite" class="rv rv-fade caps-sm" x="360" y="658" font-size="17"
+          fill="#8A7A5F" text-anchor="middle">Request the pleasure of your company</text>
+
+    <text id="line-date" class="rv rv-fade caps" x="360" y="706" font-size="26"
+          fill="#43614A" text-anchor="middle">Saturday, 12th Dec 2026</text>
+
+    <text id="line-time" class="rv rv-fade caps-sm" x="360" y="744" font-size="20"
+          fill="#7C3A2C" text-anchor="middle">7:00 PM Onwards</text>
+
+    <g id="line-venue" class="rv rv-fade">
+      <text class="caps-sm" x="360" y="784" font-size="19" fill="#43614A" text-anchor="middle">The Grand Pavilion, Juhu, Mumbai</text>
+    </g>
+  </svg>
+</div>
+</body>
+</html>
