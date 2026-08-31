@@ -8,7 +8,7 @@ const WEDDING = new Date(SITE.weddingISO);
 
 function currentTarget(now) {
   if (now < ENGAGEMENT) {
-    return { when: ENGAGEMENT, label: "Until our Saakharpuda", date: SITE.engagementLine };
+    return { when: ENGAGEMENT, label: "Until our Engagement", date: SITE.engagementLine };
   }
   if (now < WEDDING) {
     return { when: WEDDING, label: "Until we say forever", date: SITE.weddingLine };
@@ -97,13 +97,11 @@ function polaroids(list) {
 }
 
 function openFamily() {
-  $("polaroids").innerHTML = polaroids(SITE.familyAlbum);
   $("with-family-line").textContent = SITE.withFamily.line;
   $("with-family-polaroids").innerHTML = polaroids(SITE.withFamily.photos);
   $("fixing-day-line").textContent = SITE.fixingDay.line;
   $("fixing-day-polaroids").innerHTML = polaroids(SITE.fixingDay.photos);
   renderTickets();
-  $("gallery").hidden = false;
   $("with-family").hidden = false;
   $("fixing-day").hidden = false;
   $("us-gate").hidden = flag.get(US_KEY);
@@ -133,7 +131,7 @@ $("gate-form").addEventListener("submit", (ev) => {
   if (SITE.flowerAnswer.test(answer)) {
     flag.set(FAMILY_KEY);
     openFamily();
-    document.getElementById("gallery").scrollIntoView({ behavior: "smooth" });
+    document.getElementById("with-family").scrollIntoView({ behavior: "smooth" });
   } else {
     const card = $("gate-card");
     card.classList.remove("shake");

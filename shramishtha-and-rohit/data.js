@@ -14,24 +14,14 @@ const SITE = {
 
   story: [
     {
-      date: "Once upon a time",
-      title: "Two paths crossed",
-      note: "[sample] How did you two first meet? Tell me the story and it goes right here.",
-    },
-    {
       date: "21 June 2026",
       title: "The families said yes",
       note: "Chhatrapati Sambhajinagar — both homes, elders and cousins in one room. By evening, the wedding was fixed.",
     },
     {
-      date: "3 July 2026",
-      title: "The balloon evening",
-      note: "[sample] Golden balloons, held hands, and a cake somewhere nearby. This looks like a day worth naming.",
-    },
-    {
-      date: "3 July 2026",
-      title: "Let coffee connect us",
-      note: "[sample] The café wall said it before we did.",
+      date: "28 June 2026",
+      title: "The venue hunt begins",
+      note: "A trip to Fort View Adventure Resort, scouting where forever might start.",
     },
     {
       date: "30 August 2026",
@@ -39,13 +29,8 @@ const SITE = {
       note: "We hit a rough patch — sharp words, messages I wish I could unsend. The roses were how I said the truest thing: I'm sorry, and I choose us. She forgave me. That's who she is.",
     },
     {
-      date: "2026",
-      title: "The venue hunt begins",
-      note: "A trip to Fort View Adventure Resort, scouting where forever might start. (tell me the date)",
-    },
-    {
       date: "13 September 2026",
-      title: "Saakharpuda",
+      title: "The Engagement",
       note: "The ring, the promise, the beginning — Hotel NeelKamal, Beed.",
     },
     {
@@ -100,17 +85,14 @@ const SITE = {
     ],
   },
 
-  familyAlbum: [
-    { src: "photos/p5.jpg", caption: "The apology roses — 30 August 2026" },
-    { src: "photos/p6.jpg", caption: "That smile, mid-laugh" },
-    { src: "photos/p7.jpg", caption: "An evening with family" },
-    { src: "photos/p8.jpg", caption: "Us, simply" },
-    { src: "photos/p9.jpg", caption: "Fort View Adventure Resort — hunting for where forever begins" },
-  ],
-
   usAlbum: [
     { src: "photos/p1.jpg", caption: "The balloon evening — 3 July 2026" },
     { src: "photos/p3.jpg", caption: "Let coffee connect us" },
+    { src: "photos/p5.jpg", caption: "The apology roses — 30 August 2026" },
+    { src: "photos/p6.jpg", caption: "That smile, mid-laugh" },
+    { src: "photos/p7.jpg", caption: "An evening, just us" },
+    { src: "photos/p8.jpg", caption: "Us, simply" },
+    { src: "photos/p9.jpg", caption: "Fort View Adventure Resort — hunting for where forever begins" },
   ],
 
   hands: {
@@ -124,7 +106,6 @@ const SITE = {
   songs: [], // the list begins the day the first song is chosen
 
   places: [
-    { name: "The coffee-connect café", note: "[sample] its real name goes here" },
     { name: "Beed", note: "where the yes happened" },
     { name: "Fort View Adventure Resort", note: "the marriage-destination-finding trip" },
     { name: "Next place", note: "[sample] every trip we take gets added" },
@@ -132,6 +113,5 @@ const SITE = {
 
   letters: [
     { from: "Rohit", note: "Sealed. To be opened on a very special day, years from now." },
-    { from: "Shramishtha", note: "Sealed. No peeking — not even each other." },
   ],
 };
