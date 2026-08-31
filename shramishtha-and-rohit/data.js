@@ -63,9 +63,15 @@ const SITE = {
   withFamily: {
     line: "Some people arrive and simply belong — on both sides. These frames say it better than words ever could.",
     photos: [
-      { src: "photos/with-family/f1.jpg", caption: "A garden walk with Aai" },
+      { src: "photos/with-family/f1.jpg", caption: "Her hand on Aai's shoulder — Aai couldn't wait to tell me" },
       { src: "photos/with-family/f2.jpg", caption: "Aai, Baba & her — one happy frame" },
       { src: "photos/with-family/f3.jpg", caption: "Her birthday lunch, with her family" },
+    ],
+    moments: [
+      {
+        title: "Prozone Mall, bodyguard duty",
+        text: "Aai walking ahead, her future daughter-in-law stationed right behind — ready for any fall that dared to happen. Aai noticed. Aai approved. I just paid for parking.",
+      },
     ],
   },
 
@@ -73,7 +79,7 @@ const SITE = {
     line: "Chhatrapati Sambhajinagar — one afternoon, every blessing we needed.",
     photos: [
       { src: "photos/fixing-the-wedding/w1.jpg", caption: "Blessings from the elders" },
-      { src: "photos/fixing-the-wedding/w2.jpg", caption: "The young brigade" },
+      { src: "photos/fixing-the-wedding/w2.jpg", caption: "Her younger brother — the approval committee of one" },
       { src: "photos/fixing-the-wedding/w3.jpg", caption: "Family on both sides" },
       { src: "photos/fixing-the-wedding/w4.jpg", caption: "With the uncles" },
       { src: "photos/fixing-the-wedding/w5.jpg", caption: "Elders' blessings" },

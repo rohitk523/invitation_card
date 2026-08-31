@@ -221,6 +221,18 @@ a { color: #7C2E48; }
 .polaroid img { aspect-ratio: 4 / 5; object-fit: cover; width: 100%; }
 .polaroid figcaption { font-family: "Caveat", cursive; font-size: 19px; color: #6E5560; text-align: center; padding-top: 10px; }
 
+/* ---------- little moments (photo-less memories) ---------- */
+.moments { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; margin-top: 34px; }
+.moment {
+  width: min(420px, 100%); background: #FDF9F1;
+  border: 1px solid #E3D5BD; border-radius: 4px;
+  padding: 18px 22px 16px;
+  box-shadow: 0 8px 22px rgba(70, 50, 58, .08);
+  transform: rotate(-.6deg);
+}
+.moment-title { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: #B08D57; margin: 0 0 6px; }
+.moment-text { font-family: "Caveat", cursive; font-size: 20px; line-height: 1.45; color: #6E5560; margin: 0; }
+
 /* ---------- hands band ---------- */
 .hands {
   background: #7C2E48; color: #F3DAD8;

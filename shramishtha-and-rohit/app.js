@@ -99,6 +99,11 @@ function polaroids(list) {
 function openFamily() {
   $("with-family-line").textContent = SITE.withFamily.line;
   $("with-family-polaroids").innerHTML = polaroids(SITE.withFamily.photos);
+  $("with-family-moments").innerHTML = (SITE.withFamily.moments ?? []).map((m) => `
+    <article class="moment">
+      <p class="moment-title">${m.title}</p>
+      <p class="moment-text">${m.text}</p>
+    </article>`).join("");
   $("fixing-day-line").textContent = SITE.fixingDay.line;
   $("fixing-day-polaroids").innerHTML = polaroids(SITE.fixingDay.photos);
   renderTickets();
