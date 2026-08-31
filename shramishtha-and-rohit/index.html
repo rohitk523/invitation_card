@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Shramishtha & Rohit — our little corner of the internet.">
+<title>Shramishtha &amp; Rohit</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌷</text></svg>">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Caveat:wght@500;600&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+  <a class="nav-mark" href="#top">R <span class="heart">♥</span> S</a>
+  <div class="nav-links">
+    <a href="#story">Story</a>
+    <a href="#movies">Movies</a>
+    <a href="#gallery">Album</a>
+    <a href="#hands">Hands</a>
+    <a href="#songs">Songs</a>
+  </div>
+</nav>
+
+<!-- ============ HERO / COUNTDOWN ============ -->
+<header class="hero" id="top">
+  <div class="petals" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+  <p class="hero-eyebrow" id="hero-eyebrow">the countdown to forever</p>
+  <h1 class="hero-names">Shramishtha <span class="amp">&amp;</span> Rohit</h1>
+  <p class="hero-sub" id="count-label">Until our Saakharpuda</p>
+
+  <div class="countdown" id="countdown" role="timer" aria-live="off">
+    <div class="unit"><span class="num" id="cd-d">–</span><span class="lbl">days</span></div>
+    <div class="colon">:</div>
+    <div class="unit"><span class="num" id="cd-h">–</span><span class="lbl">hours</span></div>
+    <div class="colon">:</div>
+    <div class="unit"><span class="num" id="cd-m">–</span><span class="lbl">minutes</span></div>
+    <div class="colon">:</div>
+    <div class="unit"><span class="num" id="cd-s">–</span><span class="lbl">seconds</span></div>
+  </div>
+
+  <p class="hero-date" id="count-date"></p>
+  <a class="scroll-hint" href="#story" aria-label="Scroll to our story">⌄</a>
+</header>
+
+<main>
+  <!-- ============ STORY ============ -->
+  <section class="section" id="story">
+    <p class="sec-eyebrow">chapter one</p>
+    <h2 class="sec-title">Our Story</h2>
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <!-- ============ MOVIES ============ -->
+  <section class="section section-alt" id="movies">
+    <p class="sec-eyebrow">admit two, always</p>
+    <h2 class="sec-title">Movies We Watched</h2>
+    <p class="sec-note">Every ticket stub we can remember — and the photos from those nights, once the album is open.</p>
+    <div class="tickets" id="tickets"></div>
+  </section>
+
+  <!-- ============ FLOWER GATE ============ -->
+  <section class="section gate-section" id="gate">
+    <div class="gate-card" id="gate-card">
+      <p class="gate-flower" aria-hidden="true">🌷</p>
+      <h2 class="gate-title">Before the album opens…</h2>
+      <p class="gate-q">What are our favourite flowers?</p>
+      <form id="gate-form">
+        <input id="gate-input" type="text" autocomplete="off" autocapitalize="off"
+               placeholder="type your answer" aria-label="What are our favourite flowers?">
+        <button type="submit">Open the album</button>
+      </form>
+      <p class="gate-hint" id="gate-hint"></p>
+    </div>
+    <div class="gate-open" id="gate-open" hidden>
+      <p class="gate-flower" aria-hidden="true">🌷</p>
+      <p class="gate-welcome">You know us well. Welcome in.</p>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY (locked) ============ -->
+  <section class="section locked" id="gallery" hidden>
+    <p class="sec-eyebrow">the album</p>
+    <h2 class="sec-title">Us, in Photographs</h2>
+    <div class="polaroids" id="polaroids"></div>
+  </section>
+
+  <!-- ============ HANDS (locked) ============ -->
+  <section class="hands" id="hands" hidden>
+    <p class="hands-line" id="hands-line"></p>
+    <div class="hands-row" id="hands-row"></div>
+    <p class="hands-foot">This wall grows with every photo where our hands found each other.</p>
+  </section>
+
+  <!-- ============ SONGS ============ -->
+  <section class="section" id="songs">
+    <p class="sec-eyebrow">on repeat</p>
+    <h2 class="sec-title">Our Songs</h2>
+    <ul class="songs" id="songs-list"></ul>
+  </section>
+
+  <!-- ============ PLACES ============ -->
+  <section class="section section-alt" id="places">
+    <p class="sec-eyebrow">pins on our map</p>
+    <h2 class="sec-title">Places That Know Us</h2>
+    <div class="places" id="places-list"></div>
+  </section>
+
+  <!-- ============ LETTERS ============ -->
+  <section class="section" id="letters">
+    <p class="sec-eyebrow">for much later</p>
+    <h2 class="sec-title">Letters We&rsquo;ll Open Someday</h2>
+    <p class="sec-note">Written now, sealed tight, waiting for a day worth opening them on.</p>
+    <div class="letters" id="letters-list"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p class="footer-script">Shramishtha &amp; Rohit</p>
+  <p class="footer-line">est. 13.09.2026 · married-to-be 29.01.2027</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
