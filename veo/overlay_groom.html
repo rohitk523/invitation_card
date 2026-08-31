@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>groom text overlay</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@500;600&display=swap">
+<style>
+  /* Transparent 3-scene overlay for the groom-side invite, 720x1280.
+     Timeline: 14s total.
+     S1 (names)   0.7s-5.5s   S2 (family invites) 5.6s-9.7s   S3 (venue) 9.7s-14s */
+  html, body { margin: 0; background: transparent; }
+  .frame { position: relative; width: 720px; height: 1280px; overflow: hidden; }
+  svg { display: block; width: 720px; height: 1280px; }
+
+  .script  { font-family: "Great Vibes", cursive; }
+  .caps    { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600;
+             letter-spacing: .32em; text-transform: uppercase; }
+  .caps-sm { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500;
+             letter-spacing: .26em; text-transform: uppercase; }
+
+  .rv { opacity: 0; }
+  .rv-fade { animation: fadeUp 1.2s cubic-bezier(.22,.61,.36,1) forwards; transform-box: fill-box; }
+
+  #scene1 { animation: sceneOut .8s ease forwards; animation-delay: 4.7s; }
+  #scene2 { animation: sceneOut .8s ease forwards; animation-delay: 8.9s; }
+
+  #s1-script { animation: fadeIn .01s linear forwards; animation-delay: .7s; }
+  #script-wipe { animation: wipe 2.2s cubic-bezier(.4,0,.3,1) forwards; animation-delay: .7s; }
+  #s1-names { animation: nameIn 1.5s cubic-bezier(.22,.61,.36,1) forwards; animation-delay: 2.5s;
+              transform-box: fill-box; transform-origin: center; }
+
+  #s2-family  { animation-delay: 5.6s; }
+  #s2-invites { animation-delay: 6.2s; }
+  #s2-event   { animation-delay: 6.8s; }
+
+  #s3-date    { animation-delay: 9.7s; }
+  #s3-time    { animation-delay: 10.3s; }
+  #s3-venue   { animation-delay: 10.9s; }
+  #s3-address { animation-delay: 11.5s; }
+
+  @keyframes fadeIn { to { opacity: 1; } }
+  @keyframes sceneOut { from { opacity: 1; } to { opacity: 0; } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); }
+                      to   { opacity: 1; transform: translateY(0); } }
+  @keyframes nameIn { from { opacity: 0; transform: scale(.93); }
+                      to   { opacity: 1; transform: scale(1); } }
+  @keyframes wipe { from { width: 0; } to { width: 640px; } }
+</style>
+</head>
+<body>
+<div class="frame">
+  <svg viewBox="0 0 720 1280">
+    <defs>
+      <clipPath id="scriptClip"><rect id="script-wipe" x="40" y="462" width="0" height="78"/></clipPath>
+    </defs>
+
+    <!-- Scene 1: who & whose engagement (groom first) -->
+    <g id="scene1">
+      <g id="s1-script" class="rv">
+        <g clip-path="url(#scriptClip)">
+          <text class="script" x="360" y="515" font-size="46" text-anchor="middle" fill="#96733F">The beginning of forever</text>
+        </g>
+      </g>
+      <g id="s1-names" class="rv">
+        <text class="script" x="360" y="600" font-size="62" text-anchor="middle" fill="#8A6234">Rohit &amp; Shramishtha</text>
+        <path d="M 255 623 q 105 20 210 0" fill="none" stroke="#C3A368" stroke-width="1.6"/>
+        <circle cx="360" cy="633" r="3" fill="#C3A368"/>
+      </g>
+    </g>
+
+    <!-- Scene 2: the family invites you -->
+    <g id="scene2">
+      <text id="s2-family" class="rv rv-fade script" x="360" y="525" font-size="46"
+            text-anchor="middle" fill="#8A6234">The Kale Family</text>
+      <text id="s2-invites" class="rv rv-fade caps-sm" x="360" y="566" font-size="15"
+            fill="#8A7A5F" text-anchor="middle">warmly invites you to the</text>
+      <text id="s2-event" class="rv rv-fade caps" x="360" y="610" font-size="23"
+            fill="#7C3A2C" text-anchor="middle">Engagement Ceremony</text>
+    </g>
+
+    <!-- Scene 3: venue awareness -->
+    <g id="scene3">
+      <text id="s3-date" class="rv rv-fade caps" x="360" y="506" font-size="24"
+            fill="#43614A" text-anchor="middle">Sunday, 13th September 2026</text>
+      <text id="s3-time" class="rv rv-fade caps-sm" x="360" y="544" font-size="18"
+            fill="#7C3A2C" text-anchor="middle">12:00 PM Onwards</text>
+      <text id="s3-venue" class="rv rv-fade script" x="360" y="606" font-size="46"
+            text-anchor="middle" fill="#8A6234">Hotel NeelKamal</text>
+      <text id="s3-address" class="rv rv-fade caps-sm" x="360" y="642" font-size="14.5"
+            fill="#8A7A5F" text-anchor="middle">Nagar Road, Opposite District Court</text>
+    </g>
+  </svg>
+</div>
+</body>
+</html>

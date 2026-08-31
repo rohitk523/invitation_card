@@ -1,16 +1,18 @@
-// Animates the still with Veo image-to-video.
-// Usage: node --env-file=../.env generate-video.mjs [modelId]
+// Animates a still with Veo image-to-video.
+// Usage: node --env-file=../.env generate-video.mjs [modelId] [imagePath] [outPath]
 //   default model: veo-3.1-lite-generate-preview ($0.05/s); pass
 //   veo-3.1-generate-preview for the standard model ($0.40/s).
 import { GoogleGenAI } from "@google/genai";
 import { readFileSync } from "node:fs";
 
 const MODEL = process.argv[2] ?? "veo-3.1-lite-generate-preview";
+const IMAGE = process.argv[3] ?? "../out/still.png";
+const OUT = process.argv[4] ?? "../out/veo_raw.mp4";
 const ai = new GoogleGenAI({});
 
 const PROMPT = `Bring this illustrated wedding-invitation artwork to life with very subtle, gentle ambient motion. Locked static camera, no zoom, no pan. The green leaf garlands and jasmine strings at the top sway softly as if in a light breeze. The chandelier candle flames flicker gently. A few blush pink rose petals drift slowly down through the scene. The bride's dupatta and the drapes ripple very slightly. The couple moves minimally: a slight tilt of heads toward each other as the groom slides the ring onto the bride's finger, with a tiny golden sparkle at their hands. Preserve the flat illustration art style exactly; nothing changes style or color. No text, letters, watermarks or logos appear. No camera zoom, pan or cuts, no photorealism, no extra people. Soft romantic Indian instrumental music with gentle shehnai, no vocals, no talking.`;
 
-const imageBytes = readFileSync("../out/still.png").toString("base64");
+const imageBytes = readFileSync(IMAGE).toString("base64");
 
 let operation = await ai.models.generateVideos({
   model: MODEL,
@@ -44,5 +46,5 @@ if (!video) {
   process.exit(1);
 }
 
-await ai.files.download({ file: video, downloadPath: "../out/veo_raw.mp4" });
-console.log(`Saved ../out/veo_raw.mp4 (model: ${MODEL})`);
+await ai.files.download({ file: video, downloadPath: OUT });
+console.log(`Saved ${OUT} (model: ${MODEL})`);
