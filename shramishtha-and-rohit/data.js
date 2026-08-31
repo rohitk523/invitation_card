@@ -69,10 +69,11 @@ const SITE = {
   ],
 
   withFamily: {
-    line: "Some people arrive and simply belong. These frames say it better than words ever could.",
+    line: "Some people arrive and simply belong — on both sides. These frames say it better than words ever could.",
     photos: [
       { src: "photos/with-family/f1.jpg", caption: "A garden walk with Aai" },
       { src: "photos/with-family/f2.jpg", caption: "Aai, Baba & her — one happy frame" },
+      { src: "photos/with-family/f3.jpg", caption: "Her birthday lunch, with her family" },
     ],
   },
 
