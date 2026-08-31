@@ -105,8 +105,6 @@ const SITE = {
     { src: "photos/p3.jpg", caption: "Let coffee connect us" },
     { src: "photos/p5.jpg", caption: "The apology roses — 30 August 2026" },
     { src: "photos/p6.jpg", caption: "That smile, mid-laugh" },
-    { src: "photos/p7.jpg", caption: "An evening, just us" },
-    { src: "photos/p8.jpg", caption: "Us, simply" },
     { src: "photos/p9.jpg", caption: "Fort View Adventure Resort — hunting for where forever begins" },
   ],
 
