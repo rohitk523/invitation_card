@@ -97,7 +97,6 @@ const SITE = {
       { src: "photos/fixing-the-wedding/w7.jpg", caption: "My sister, center of the frame — her preferred location" },
       { src: "photos/with-family/f4.jpg", caption: "The cousins' squad" },
       { src: "photos/with-family/f5.jpg", caption: "Her mother, the mamas & mavshi" },
-      { src: "photos/with-family/f6.jpg", caption: "Blessings all around" },
     ],
   },
 
