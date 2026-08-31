@@ -174,12 +174,6 @@ $("songs-list").innerHTML = SITE.songs.length
       </li>`).join("")
   : `<li class="songs-empty">We haven&rsquo;t chosen our first song yet. The list begins the day we do. ♪</li>`;
 
-$("places-list").innerHTML = SITE.places.map((p) => `
-  <div class="place">
-    <span class="place-name">${p.name}</span>
-    <span class="place-note">${p.note}</span>
-  </div>`).join("");
-
 $("letters-list").innerHTML = SITE.letters.map((l) => `
   <article class="letter">
     <div class="letter-seal">${l.from[0]}</div>

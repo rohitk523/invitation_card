@@ -118,12 +118,6 @@ const SITE = {
 
   songs: [], // the list begins the day the first song is chosen
 
-  places: [
-    { name: "Beed", note: "where the yes happened" },
-    { name: "Fort View Adventure Resort", note: "the marriage-destination-finding trip" },
-    { name: "Next place", note: "[sample] every trip we take gets added" },
-  ],
-
   letters: [
     { from: "Rohit", note: "Sealed. To be opened on a very special day, years from now." },
   ],
