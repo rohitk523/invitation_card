@@ -45,38 +45,31 @@ const SITE = {
     },
   ],
 
+  // poster: always-visible original artwork · photo: our own picture, opens with the album
   movies: [
     {
-      title: "Our first movie together",
-      date: "date?",
-      note: "[sample] Which film was the first? Replace this stub with the real one.",
+      title: "Hai Jawani Toh Ishq Hona Hai",
+      date: "2026",
+      note: "Which day was this, and which cinema? The memory line goes here.",
+      poster: "photos/poster-hjtihh.jpg",
       photo: null,
     },
     {
-      title: "The one we quote all the time",
-      date: "date?",
-      note: "[sample] Every couple has one. Which is ours?",
-      photo: null,
-    },
-    {
-      title: "The interval-samosa film",
-      date: "date?",
-      note: "[sample] Remembered less for the plot, more for the snacks.",
-      photo: null,
-    },
-    {
-      title: "The one she picked",
-      date: "date?",
-      note: "[sample] And he pretended not to cry.",
-      photo: null,
-    },
-    {
-      title: "The one he picked",
-      date: "date?",
-      note: "[sample] And she fell asleep on his shoulder.",
+      title: "Ohh My Dog",
+      date: "2026",
+      note: "The dog one. Waiting on the story from you two.",
+      poster: "photos/poster-ohhmydog.jpg",
       photo: null,
     },
   ],
+
+  withFamily: {
+    line: "Some people arrive and simply belong. These frames say it better than words ever could.",
+    photos: [
+      { src: "photos/with-family/f1.jpg", caption: "A garden walk with Aai" },
+      { src: "photos/with-family/f2.jpg", caption: "Aai, Baba & her — one happy frame" },
+    ],
+  },
 
   familyAlbum: [
     { src: "photos/p5.jpg", caption: "Roses at home — 30 August 2026" },
@@ -98,11 +91,7 @@ const SITE = {
     ],
   },
 
-  songs: [
-    { title: "Song one", note: "[sample] The song that is ours — tell me which." },
-    { title: "Song two", note: "[sample] The one we play in the car." },
-    { title: "Song three", note: "[sample] The one from that one night." },
-  ],
+  songs: [], // the list begins the day the first song is chosen
 
   places: [
     { name: "The coffee-connect café", note: "[sample] its real name goes here" },

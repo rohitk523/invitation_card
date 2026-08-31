@@ -57,6 +57,10 @@ function ticketPhoto(m) {
   if (!m.photo || !unlocked()) return "";
   return `<div class="ticket-photo"><img src="${m.photo}" alt="Photo from ${m.title}" loading="lazy"></div>`;
 }
+function ticketPoster(m) {
+  if (!m.poster) return "";
+  return `<div class="ticket-poster"><img src="${m.poster}" alt="Our poster art for ${m.title}" loading="lazy"></div>`;
+}
 function renderTickets() {
   $("tickets").innerHTML = SITE.movies.map((m) => `
     <article class="ticket">
@@ -64,6 +68,7 @@ function renderTickets() {
         <span class="ticket-admit">Admit Two</span>
         <span class="ticket-seat">Seats R &amp; S</span>
       </div>
+      ${ticketPoster(m)}
       <h3 class="ticket-title">${m.title}</h3>
       <p class="ticket-date">${m.date}</p>
       <p class="ticket-note">${m.note}</p>
@@ -92,8 +97,11 @@ function polaroids(list) {
 
 function openFamily() {
   $("polaroids").innerHTML = polaroids(SITE.familyAlbum);
+  $("with-family-line").textContent = SITE.withFamily.line;
+  $("with-family-polaroids").innerHTML = polaroids(SITE.withFamily.photos);
   renderTickets();
   $("gallery").hidden = false;
+  $("with-family").hidden = false;
   $("us-gate").hidden = flag.get(US_KEY);
   $("gate-card").hidden = true;
   $("gate-open").hidden = false;
@@ -150,12 +158,14 @@ $("us-gate-form").addEventListener("submit", (ev) => {
 });
 
 /* ---------- songs / places / letters ---------- */
-$("songs-list").innerHTML = SITE.songs.map((s) => `
-  <li>
-    <span class="song-icon">♪</span>
-    <span class="song-title">${s.title}</span>
-    <span class="song-note">${s.note}</span>
-  </li>`).join("");
+$("songs-list").innerHTML = SITE.songs.length
+  ? SITE.songs.map((s) => `
+      <li>
+        <span class="song-icon">♪</span>
+        <span class="song-title">${s.title}</span>
+        <span class="song-note">${s.note}</span>
+      </li>`).join("")
+  : `<li class="songs-empty">We haven&rsquo;t chosen our first song yet. The list begins the day we do. ♪</li>`;
 
 $("places-list").innerHTML = SITE.places.map((p) => `
   <div class="place">

@@ -163,6 +163,8 @@ a { color: #7C2E48; }
 .ticket-date { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #B08D57; }
 .ticket-note { font-family: "Caveat", cursive; font-size: 18.5px; color: #6E5560; margin: 10px 0 0; line-height: 1.4; }
 .ticket-photo { margin-top: 12px; border-radius: 8px; overflow: hidden; }
+.ticket-poster { margin: 12px 0 6px; border-radius: 8px; overflow: hidden; }
+.ticket-poster img { aspect-ratio: 2 / 3; object-fit: cover; width: 100%; }
 
 /* ---------- flower gate ---------- */
 .gate-section { text-align: center; }
@@ -243,6 +245,11 @@ a { color: #7C2E48; }
 .song-icon { color: #C05B72; font-size: 15px; }
 .song-title { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 21px; color: #46323A; }
 .song-note { font-family: "Caveat", cursive; font-size: 18px; color: #8A6B74; margin-left: auto; text-align: right; }
+.songs-empty {
+  justify-content: center; border-bottom: none !important;
+  font-family: "Caveat", cursive; font-size: 21px; color: #8A6B74; text-align: center;
+}
+.polaroids-duo { grid-template-columns: repeat(auto-fit, minmax(250px, 330px)); justify-content: center; }
 
 /* ---------- places ---------- */
 .places { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 38px; }
