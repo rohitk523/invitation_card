@@ -26,7 +26,7 @@ const SITE = {
     {
       date: "30 August 2026",
       title: "The apology roses",
-      note: "We hit a rough patch — sharp words, messages I wish I could unsend. The roses were how I said the truest thing: I'm sorry, and I choose us. She forgave me. That's who she is.",
+      note: "We hit a rough patch — sharp words, messages I wish I could unsend. The roses were how I said the truest thing: I'm sorry, and I choose us. She forgave me — once the roses cleared quality inspection. I'm told the matter can still be reopened as evidence in any future argument.",
     },
     {
       date: "13 September 2026",
