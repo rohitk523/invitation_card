@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>royal couple overlay</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@500;600&display=swap">
+<style>
+  /* Transparent overlay for the purple-panel segment, 720x1280, 24s.
+     Four sub-scenes fade in and out on the purple damask panel:
+     C1 monogram+names 0.4-6.8 | C2 cordial invite 7.2-13.4
+     C3 parents 13.8-19.4 | C4 venue 19.8-24 (holds) */
+  html, body { margin: 0; background: transparent; }
+  .frame { position: relative; width: 720px; height: 1280px; overflow: hidden; }
+  svg { display: block; width: 720px; height: 1280px; }
+
+  .script  { font-family: "Great Vibes", cursive; }
+  .caps    { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600;
+             text-transform: uppercase; }
+  .caps-sm { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500;
+             text-transform: uppercase; }
+
+  .rv { opacity: 0; }
+  .rv-fade { animation: fadeUp 1.2s cubic-bezier(.22,.61,.36,1) forwards; transform-box: fill-box; }
+
+  #c1 { animation: sceneOut .8s ease forwards; animation-delay: 6.0s; }
+  #c2 { animation: sceneOut .8s ease forwards; animation-delay: 12.6s; }
+  #c3 { animation: sceneOut .8s ease forwards; animation-delay: 18.6s; }
+
+  #c1-mono  { animation: nameIn 1.5s cubic-bezier(.22,.61,.36,1) forwards; animation-delay: .4s;
+              transform-box: fill-box; transform-origin: center; }
+  #c1-names { animation-delay: 1.5s; }
+
+  #c2-line1 { animation-delay: 7.2s; }
+  #c2-line2 { animation-delay: 7.7s; }
+  #c2-big   { animation: nameIn 1.5s cubic-bezier(.22,.61,.36,1) forwards; animation-delay: 8.3s;
+              transform-box: fill-box; transform-origin: center; }
+  #c2-line3 { animation-delay: 9.0s; }
+
+  #c3-g-name { animation-delay: 13.8s; }
+  #c3-g-par  { animation-delay: 14.3s; }
+  #c3-amp    { animation-delay: 14.8s; }
+  #c3-b-name { animation-delay: 15.3s; }
+  #c3-b-par  { animation-delay: 15.8s; }
+
+  #c4-day   { animation-delay: 19.8s; }
+  #c4-date  { animation-delay: 20.25s; }
+  #c4-time  { animation-delay: 20.7s; }
+  #c4-venue { animation-delay: 21.2s; }
+  #c4-hotel { animation-delay: 21.7s; }
+  #c4-addr  { animation-delay: 22.2s; }
+
+  @keyframes sceneOut { from { opacity: 1; } to { opacity: 0; } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); }
+                      to   { opacity: 1; transform: translateY(0); } }
+  @keyframes nameIn { from { opacity: 0; transform: scale(.92); }
+                      to   { opacity: 1; transform: scale(1); } }
+</style>
+</head>
+<body>
+<div class="frame">
+  <svg viewBox="0 0 720 1280">
+    <!-- C1: monogram + names -->
+    <g id="c1">
+      <g id="c1-mono" class="rv">
+        <text class="script" x="360" y="480" font-size="92" text-anchor="middle" fill="#EFD37E">R &amp; S</text>
+        <path d="M 260 512 q 100 20 200 0" fill="none" stroke="#EFD37E" stroke-width="1.8"/>
+        <circle cx="360" cy="523" r="3.2" fill="#EFD37E"/>
+      </g>
+      <text id="c1-names" class="rv rv-fade script" x="360" y="600" font-size="56"
+            text-anchor="middle" fill="#F5EDDC">Rohit &amp; Shramishtha</text>
+    </g>
+
+    <!-- C2: cordial invite -->
+    <g id="c2">
+      <text id="c2-line1" class="rv rv-fade caps-sm" x="360" y="442" font-size="22"
+            letter-spacing=".24em" fill="#F5EDDC" text-anchor="middle">We cordially invite</text>
+      <text id="c2-line2" class="rv rv-fade caps-sm" x="360" y="482" font-size="18"
+            letter-spacing=".24em" fill="#F5EDDC" text-anchor="middle">you to the</text>
+      <text id="c2-big" class="rv script" x="360" y="586" font-size="80"
+            text-anchor="middle" fill="#EFD37E">Engagement</text>
+      <text id="c2-line3" class="rv rv-fade caps-sm" x="360" y="636" font-size="24"
+            letter-spacing=".3em" fill="#F5EDDC" text-anchor="middle">Ceremony</text>
+    </g>
+
+    <!-- C3: parents (parent names are MOCKUPS pending real ones) -->
+    <g id="c3">
+      <text id="c3-g-name" class="rv rv-fade script" x="360" y="436" font-size="56"
+            text-anchor="middle" fill="#F5EDDC">Rohit</text>
+      <text id="c3-g-par" class="rv rv-fade caps-sm" x="360" y="478" font-size="15"
+            letter-spacing=".16em" fill="#E8DCC2" text-anchor="middle">S/O Mr. Rajendra &amp; Mrs. Sunita Kale</text>
+      <text id="c3-amp" class="rv rv-fade script" x="360" y="540" font-size="44"
+            text-anchor="middle" fill="#EFD37E">&amp;</text>
+      <text id="c3-b-name" class="rv rv-fade script" x="360" y="606" font-size="56"
+            text-anchor="middle" fill="#F5EDDC">Shramishtha</text>
+      <text id="c3-b-par" class="rv rv-fade caps-sm" x="360" y="648" font-size="15"
+            letter-spacing=".16em" fill="#E8DCC2" text-anchor="middle">D/O Mr. Prakash &amp; Mrs. Vandana Deshmukh</text>
+    </g>
+
+    <!-- C4: venue -->
+    <g id="c4">
+      <text id="c4-day" class="rv rv-fade caps-sm" x="360" y="424" font-size="17"
+            letter-spacing=".34em" fill="#E8DCC2" text-anchor="middle">Sunday</text>
+      <text id="c4-date" class="rv rv-fade caps" x="360" y="468" font-size="28"
+            letter-spacing=".16em" fill="#F5EDDC" text-anchor="middle">13th September 2026</text>
+      <text id="c4-time" class="rv rv-fade caps-sm" x="360" y="510" font-size="19"
+            letter-spacing=".24em" fill="#F5EDDC" text-anchor="middle">12:00 PM Onwards</text>
+      <text id="c4-venue" class="rv rv-fade script" x="360" y="596" font-size="56"
+            text-anchor="middle" fill="#EFD37E">Venue</text>
+      <text id="c4-hotel" class="rv rv-fade caps" x="360" y="644" font-size="24"
+            letter-spacing=".2em" fill="#F5EDDC" text-anchor="middle">Hotel NeelKamal</text>
+      <text id="c4-addr" class="rv rv-fade caps-sm" x="360" y="680" font-size="15"
+            letter-spacing=".14em" fill="#E8DCC2" text-anchor="middle">Nagar Road, Opposite District Court, Beed</text>
+    </g>
+  </svg>
+</div>
+</body>
+</html>
