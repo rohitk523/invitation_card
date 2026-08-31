@@ -54,7 +54,7 @@ const SITE = {
       title: "Ohh My Dog",
       date: "2026",
       venue: "INOX, Prozone Mall · Sambhajinagar",
-      note: "The dog one. Waiting on the story from you two.",
+      note: "We skipped Spider-Man for this one — best decision. The film was great, and somewhere in that dark hall, the first movie hand-hold happened. Goosebumps.",
       poster: "photos/poster-ohhmydog.jpg",
       photo: null,
     },
