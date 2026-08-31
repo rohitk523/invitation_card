@@ -63,7 +63,7 @@ const SITE = {
       title: "Ohh My Dog",
       date: "2026",
       note: "The dog one. Waiting on the story from you two.",
-      poster: "photos/poster-ohhmydog.jpg",
+      poster: null, // send me this poster and it goes here
       photo: null,
     },
   ],

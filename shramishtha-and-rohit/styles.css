@@ -164,7 +164,7 @@ a { color: #7C2E48; }
 .ticket-note { font-family: "Caveat", cursive; font-size: 18.5px; color: #6E5560; margin: 10px 0 0; line-height: 1.4; }
 .ticket-photo { margin-top: 12px; border-radius: 8px; overflow: hidden; }
 .ticket-poster { margin: 12px 0 6px; border-radius: 8px; overflow: hidden; }
-.ticket-poster img { aspect-ratio: 2 / 3; object-fit: cover; width: 100%; }
+.ticket-poster img { width: 100%; height: auto; }
 
 /* ---------- flower gate ---------- */
 .gate-section { text-align: center; }
