@@ -14,6 +14,11 @@ const SITE = {
 
   story: [
     {
+      date: "5 June 2026",
+      title: "Hai Jawani Toh Ishq Hona Hai",
+      note: "Anjali Cinema Hall. Great seats, greater company — and the great moonlight-versus-double-roast-coffee discovery.",
+    },
+    {
       date: "21 June 2026",
       title: "The families said yes",
       note: "Chhatrapati Sambhajinagar — both homes, elders and cousins in one room. By evening, the wedding was fixed.",
@@ -22,6 +27,11 @@ const SITE = {
       date: "28 June 2026",
       title: "The venue hunt begins",
       note: "A trip to Fort View Adventure Resort, scouting where forever might start.",
+    },
+    {
+      date: "9 August 2026",
+      title: "Ohh My Dog",
+      note: "INOX, Prozone Mall. We skipped Spider-Man — and somewhere in that dark hall, the first movie hand-hold. Goosebumps.",
     },
     {
       date: "30 August 2026",
@@ -44,7 +54,7 @@ const SITE = {
   movies: [
     {
       title: "Hai Jawani Toh Ishq Hona Hai",
-      date: "2026",
+      date: "5 June 2026",
       venue: "Anjali Cinema Hall · Sambhajinagar",
       note: "Perfect seats, perfect time. Also the site of a major scientific discovery: hands side by side, she turned out to be moonlight and I'm double-roast coffee. We're calling it contrast — it's what makes a photo good.",
       poster: "photos/poster-hjtihh.jpg",
@@ -52,7 +62,7 @@ const SITE = {
     },
     {
       title: "Ohh My Dog",
-      date: "2026",
+      date: "9 August 2026",
       venue: "INOX, Prozone Mall · Sambhajinagar",
       note: "We skipped Spider-Man for this one — best decision. The film was great, and somewhere in that dark hall, the first movie hand-hold happened. Goosebumps.",
       poster: "photos/poster-ohhmydog.jpg",
