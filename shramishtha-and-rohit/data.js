@@ -8,6 +8,9 @@ const SITE = {
   engagementLine: "Sunday, 13 September 2026 · Hotel NeelKamal, Beed",
   weddingLine: "Friday, 29 January 2027",
   flowerAnswer: /tulip/i,
+  // "Just Us" door — placeholder secret: the wedding date as ddmmyyyy.
+  // Change this to something only the two of you would ever guess.
+  usAnswer: "29012027",
 
   story: [
     {
@@ -75,13 +78,16 @@ const SITE = {
     },
   ],
 
-  gallery: [
-    { src: "photos/p1.jpg", caption: "The balloon evening — 3 July 2026" },
-    { src: "photos/p3.jpg", caption: "Let coffee connect us" },
+  familyAlbum: [
     { src: "photos/p5.jpg", caption: "Roses at home — 30 August 2026" },
     { src: "photos/p6.jpg", caption: "That smile, mid-laugh" },
     { src: "photos/p7.jpg", caption: "An evening with family" },
     { src: "photos/p8.jpg", caption: "Us, simply" },
+  ],
+
+  usAlbum: [
+    { src: "photos/p1.jpg", caption: "The balloon evening — 3 July 2026" },
+    { src: "photos/p3.jpg", caption: "Let coffee connect us" },
   ],
 
   hands: {

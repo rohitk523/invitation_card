@@ -82,14 +82,36 @@
     </div>
   </section>
 
-  <!-- ============ GALLERY (locked) ============ -->
+  <!-- ============ FAMILY ALBUM (locked) ============ -->
   <section class="section locked" id="gallery" hidden>
-    <p class="sec-eyebrow">the album</p>
-    <h2 class="sec-title">Us, in Photographs</h2>
+    <p class="sec-eyebrow">for family</p>
+    <h2 class="sec-title">The Family Album</h2>
     <div class="polaroids" id="polaroids"></div>
   </section>
 
-  <!-- ============ HANDS (locked) ============ -->
+  <!-- ============ JUST-US GATE (appears after family unlock) ============ -->
+  <section class="section gate-section" id="us-gate" hidden>
+    <div class="gate-card" id="us-gate-card">
+      <p class="gate-flower" aria-hidden="true">🔑</p>
+      <h2 class="gate-title">A door only two people have the key to</h2>
+      <p class="gate-q">When does forever begin?</p>
+      <form id="us-gate-form">
+        <input id="us-gate-input" type="text" autocomplete="off" autocapitalize="off"
+               placeholder="only we know this" aria-label="When does forever begin?">
+        <button type="submit">Just us</button>
+      </form>
+      <p class="gate-hint" id="us-gate-hint"></p>
+    </div>
+  </section>
+
+  <!-- ============ JUST US ALBUM (locked) ============ -->
+  <section class="section locked" id="us-album" hidden>
+    <p class="sec-eyebrow">just us</p>
+    <h2 class="sec-title">Only Ours</h2>
+    <div class="polaroids" id="us-polaroids"></div>
+  </section>
+
+  <!-- ============ HANDS (locked, just-us tier) ============ -->
   <section class="hands" id="hands" hidden>
     <p class="hands-line" id="hands-line"></p>
     <div class="hands-row" id="hands-row"></div>

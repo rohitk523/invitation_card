@@ -72,48 +72,55 @@ function renderTickets() {
 }
 renderTickets();
 
-/* ---------- flower gate + locked sections ---------- */
-const GATE_KEY = "rs-album-open";
-function unlocked() {
-  try { return localStorage.getItem(GATE_KEY) === "yes"; } catch { return false; }
-}
-function markUnlocked() {
-  try { localStorage.setItem(GATE_KEY, "yes"); } catch { /* private mode is fine */ }
-}
+/* ---------- two-tier gates: family album, then just-us ---------- */
+const FAMILY_KEY = "rs-album-open";
+const US_KEY = "rs-us-open";
+const flag = {
+  get: (k) => { try { return localStorage.getItem(k) === "yes"; } catch { return false; } },
+  set: (k) => { try { localStorage.setItem(k, "yes"); } catch { /* private mode is fine */ } },
+};
+function unlocked() { return flag.get(FAMILY_KEY); }
 
-function renderAlbum() {
+function polaroids(list) {
   const tilts = [-2.4, 1.8, -1.2, 2.6, -2, 1.4, -1.8, 2.2];
-  $("polaroids").innerHTML = SITE.gallery.map((p, i) => `
+  return list.map((p, i) => `
     <figure class="polaroid" style="--tilt:${tilts[i % tilts.length]}deg">
       <img src="${p.src}" alt="${p.caption}" loading="lazy">
       <figcaption>${p.caption}</figcaption>
     </figure>`).join("");
+}
 
+function openFamily() {
+  $("polaroids").innerHTML = polaroids(SITE.familyAlbum);
+  renderTickets();
+  $("gallery").hidden = false;
+  $("us-gate").hidden = flag.get(US_KEY);
+  $("gate-card").hidden = true;
+  $("gate-open").hidden = false;
+}
+
+function openUs() {
+  $("us-polaroids").innerHTML = polaroids(SITE.usAlbum);
   $("hands-line").textContent = SITE.hands.line;
   $("hands-row").innerHTML = SITE.hands.photos.map((p) => `
     <figure class="polaroid">
       <img src="${p.src}" alt="Our hands, together — ${p.caption}" loading="lazy">
       <figcaption>${p.caption}</figcaption>
     </figure>`).join("");
-}
-
-function openAlbum() {
-  renderAlbum();
-  renderTickets();
-  $("gallery").hidden = false;
+  $("us-album").hidden = false;
   $("hands").hidden = false;
-  $("gate-card").hidden = true;
-  $("gate-open").hidden = false;
+  $("us-gate").hidden = true;
 }
 
-if (unlocked()) openAlbum();
+if (flag.get(FAMILY_KEY)) openFamily();
+if (flag.get(FAMILY_KEY) && flag.get(US_KEY)) openUs();
 
 $("gate-form").addEventListener("submit", (ev) => {
   ev.preventDefault();
   const answer = $("gate-input").value.trim();
   if (SITE.flowerAnswer.test(answer)) {
-    markUnlocked();
-    openAlbum();
+    flag.set(FAMILY_KEY);
+    openFamily();
     document.getElementById("gallery").scrollIntoView({ behavior: "smooth" });
   } else {
     const card = $("gate-card");
@@ -122,6 +129,23 @@ $("gate-form").addEventListener("submit", (ev) => {
     card.classList.add("shake");
     $("gate-hint").textContent = "Not quite — think of our favourite spring flower…";
     $("gate-input").select();
+  }
+});
+
+$("us-gate-form").addEventListener("submit", (ev) => {
+  ev.preventDefault();
+  const digits = $("us-gate-input").value.replace(/\D/g, "");
+  if (digits === SITE.usAnswer) {
+    flag.set(US_KEY);
+    openUs();
+    document.getElementById("us-album").scrollIntoView({ behavior: "smooth" });
+  } else {
+    const card = $("us-gate-card");
+    card.classList.remove("shake");
+    void card.offsetWidth;
+    card.classList.add("shake");
+    $("us-gate-hint").textContent = "This door stays shut. It only opens for two people.";
+    $("us-gate-input").select();
   }
 });
 
