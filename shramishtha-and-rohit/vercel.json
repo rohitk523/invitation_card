@@ -1,5 +1,8 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/tulips", "destination": "/apology" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
