@@ -114,6 +114,15 @@ const SITE = {
     { src: "photos/p5.jpg", caption: "The apology roses — 30 August 2026" },
     { src: "photos/p6.jpg", caption: "That smile, mid-laugh" },
     { src: "photos/p9.jpg", caption: "Fort View Adventure Resort — hunting for where forever begins" },
+    { src: "photos/engagement/e1.jpg", caption: "13 September — official, with witnesses" },
+    { src: "photos/engagement/e2.jpg", caption: "The saree, and the lucky guy next to it" },
+    { src: "photos/engagement/e4.jpg", caption: "Mid-conversation, mid-forever" },
+    { src: "photos/engagement/e5.jpg", caption: "A kiss on the hand that said yes" },
+    { src: "photos/engagement/e3.jpg", caption: "Reception mode: lavender and velvet" },
+    { src: "photos/engagement/e6.jpg", caption: "Her gown brought its own lighting crew" },
+    { src: "photos/engagement/e7.jpg", caption: "Walking into the rest of it" },
+    { src: "photos/engagement/e8.jpg", caption: "The twirl. The whole venue watched." },
+    { src: "photos/engagement/e9.jpg", caption: "Rings on, hands touching — R & S in mehendi" },
   ],
 
   hands: {
