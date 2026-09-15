@@ -50,6 +50,8 @@ $("timeline").innerHTML = SITE.story.map((e) => `
     <p class="tl-date">${e.date}</p>
     <h3 class="tl-title">${e.title}</h3>
     <p class="tl-note">${e.note}</p>
+    ${e.photos ? `<div class="tl-photos">${e.photos.map((p) =>
+      `<img src="${p.src}" alt="${p.alt}" loading="lazy">`).join("")}</div>` : ""}
   </li>`).join("");
 
 /* ---------- movie tickets ---------- */
@@ -122,8 +124,13 @@ function openUs() {
       <img src="${p.src}" alt="Our hands, together — ${p.caption}" loading="lazy">
       <figcaption>${p.caption}</figcaption>
     </figure>`).join("");
+  $("apology-title").textContent = SITE.apology.title;
+  $("apology-body").innerHTML =
+    SITE.apology.paragraphs.map((p) => `<p>${p}</p>`).join("") +
+    `<p class="apology-signoff">${SITE.apology.signoff}</p>`;
   $("us-album").hidden = false;
   $("hands").hidden = false;
+  $("apology").hidden = false;
   $("us-gate").hidden = true;
 }
 

@@ -41,7 +41,15 @@ const SITE = {
     {
       date: "13 September 2026",
       title: "The Engagement",
-      note: "The ring, the promise, the beginning — Hotel NeelKamal, Beed.",
+      note: "The ring, the promise, the beginning — Hotel NeelKamal, Beed. It happened, and it was perfect.",
+      photos: [
+        { src: "photos/engagement/e1.jpg", alt: "The ceremony — her pink saree, his arms around her" },
+        { src: "photos/engagement/e2.jpg", alt: "Seated together at the ceremony" },
+        { src: "photos/engagement/e5.jpg", alt: "A kiss on her hand" },
+        { src: "photos/engagement/e3.jpg", alt: "Reception — lavender gown and black tux, arm in arm" },
+        { src: "photos/engagement/e7.jpg", alt: "Walking together at the reception" },
+        { src: "photos/engagement/e8.jpg", alt: "Her twirl in the lavender gown" },
+      ],
     },
     {
       date: "29 January 2027",
@@ -113,6 +121,7 @@ const SITE = {
     photos: [
       { src: "photos/p2.jpg", caption: "3 July 2026" },
       { src: "photos/p4.jpg", caption: "Arm in arm" },
+      { src: "photos/engagement/e9.jpg", caption: "The rings — 13 September 2026" },
     ],
   },
 
@@ -121,4 +130,17 @@ const SITE = {
   letters: [
     { from: "Rohit", note: "Sealed. To be opened on a very special day, years from now." },
   ],
+
+  // Behind the just-us door. Sincere on purpose — no jokes in this one.
+  apology: {
+    title: "An Apology to the One I Love",
+    paragraphs: [
+      "I am putting this into words because I need to take profound and complete accountability. Recently, I let my own insecurities and overthinking cloud my judgment, and in doing so, I deeply hurt the person I care about most.",
+      "I jumped to conclusions and made unfair assumptions. In a moment where I should have led with trust and open communication, I reacted from a place of fear and doubt. You have always been honest, loving, and steadfast, and you did not deserve to have your character or your intentions questioned.",
+      "I know now that my reaction was a reflection of my own internal struggles, not of anything you did wrong. By projecting my insecurities onto you, I caused unnecessary pain and made you feel unvalued. For that, I am so incredibly sorry.",
+      "Love is about taking ownership when you are wrong — and I was wrong. I promise to do better. I promise to listen to you with an open heart, to trust the beautiful bond we share, and to pause and communicate my feelings before jumping to conclusions.",
+      "You mean the world to me. I deeply regret causing you pain, and I will spend every day working to be the secure, understanding, and supportive partner you truly deserve.",
+    ],
+    signoff: "— Rohit",
+  },
 };
