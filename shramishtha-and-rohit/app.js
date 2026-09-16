@@ -80,6 +80,14 @@ function renderTickets() {
 }
 renderTickets();
 
+/* ---------- her gallery (public) ---------- */
+$("her-line").textContent = SITE.her.line;
+$("her-polaroids").innerHTML = SITE.her.photos.map((p, i) => `
+  <figure class="polaroid" style="--tilt:${i % 2 ? 2 : -2}deg">
+    <img src="${p.src}" alt="${p.caption}" loading="lazy">
+    <figcaption>${p.caption}</figcaption>
+  </figure>`).join("");
+
 /* ---------- two-tier gates: family album, then just-us ---------- */
 const FAMILY_KEY = "rs-album-open";
 const US_KEY = "rs-us-open";

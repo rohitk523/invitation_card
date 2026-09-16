@@ -78,6 +78,15 @@ const SITE = {
     },
   ],
 
+  // Her own gallery — add photos to photos/her/ and list them here.
+  her: {
+    line: "Some people deserve a whole section to themselves. The management (me) fully agrees.",
+    photos: [
+      { src: "photos/her/h1.jpg", caption: "The pink saree. The smile did the rest." },
+      { src: "photos/her/h2.jpg", caption: "Twirl radius: the entire venue." },
+    ],
+  },
+
   withFamily: {
     line: "Some people arrive and simply belong — on both sides. These frames say it better than words ever could.",
     photos: [
