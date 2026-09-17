@@ -108,6 +108,7 @@
     expired:    "That took a while — please try again.",
     cancelled:  "Sign-in was cancelled.",
     google:     "Google sign-in didn't complete. Try again?",
+    nogoogle:   "Google sign-in isn't switched on yet — use the passphrase below.",
   };
   if (params.get("error")) msg.textContent = REASONS[params.get("error")] || "Something went wrong.";
 

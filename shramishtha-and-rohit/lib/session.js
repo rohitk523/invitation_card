@@ -8,7 +8,7 @@ const DEC = new TextDecoder();
 export const COOKIE = "rs_session";
 export const TIER_HINT = "rs_tier";        // readable by the page; a hint for
                                            // rendering only, never trusted
-export const MAX_AGE = 60 * 60 * 24 * 30;  // 30 days
+export const MAX_AGE = 60 * 60 * 24 * 90;  // 90 days
 
 /* Access levels. "us" is the two of them, proven by Google.
    "family" is whoever was handed the passphrase -- deliberately less. */
@@ -87,3 +87,9 @@ export function clearCookies() {
 }
 
 export const allows = (claims, need) => !!claims && RANK[claims.tier] >= RANK[need];
+
+/* Sliding window: once a session is past halfway, a visit renews it. Someone
+   who keeps coming back is never logged out; someone who drifts away still
+   ages out on their own. */
+export const worthRenewing = (claims) =>
+  claims.exp - Math.floor(Date.now() / 1000) < MAX_AGE / 2;

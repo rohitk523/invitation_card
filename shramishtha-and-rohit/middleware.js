@@ -4,7 +4,8 @@
    doesn't get bytes. */
 
 import { next } from "@vercel/edge";
-import { COOKIE, TIER, allows, readCookie, verify } from "./lib/session.js";
+import { COOKIE, TIER, allows, cookiesFor, issue, readCookie, verify, worthRenewing }
+  from "./lib/session.js";
 
 export const config = {
   /* Everything except Vercel's own internals. The login page and the auth
@@ -56,6 +57,15 @@ export default async function middleware(req) {
   if (!claims) return deny(req, pathname);
   if (usOnly(pathname) && !allows(claims, TIER.US)) return deny(req, pathname);
 
-  /* Never let a shared cache hold a private photo. */
-  return next({ headers: { "cache-control": "private, no-store" } });
+  const headers = new Headers({ "cache-control": "private, no-store" });
+
+  /* Renew on page views only -- doing it per asset would re-stamp the cookie
+     dozens of times for one page load, to no purpose. */
+  const isPage = (req.headers.get("accept") || "").includes("text/html");
+  if (isPage && worthRenewing(claims)) {
+    const { token } = await issue(claims.sub, claims.tier, secret);
+    for (const c of cookiesFor(token, claims.tier)) headers.append("set-cookie", c);
+  }
+
+  return next({ headers });
 }

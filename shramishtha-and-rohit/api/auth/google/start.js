@@ -18,7 +18,10 @@ export function safeNext(value) {
 export default function handler(req, res) {
   const clientId = process.env.GOOGLE_CLIENT_ID;
   if (!clientId || !process.env.SESSION_SECRET) {
-    res.status(503).send("Sign-in is not configured yet.");
+    /* Google isn't wired up yet -- say so on the door rather than dead-ending
+       on a bare error page. The passphrase still works. */
+    res.writeHead(302, { Location: "/login?error=nogoogle", "Cache-Control": "private, no-store" });
+    res.end();
     return;
   }
 
