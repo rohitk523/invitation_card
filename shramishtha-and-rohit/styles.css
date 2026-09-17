@@ -338,3 +338,110 @@ a { color: #7C2E48; }
   .scroll-hint { opacity: 1; }
   .polaroid, .polaroid:hover { transform: none; }
 }
+
+/* ---------- photo viewer ---------- */
+.tl-photos img, .polaroid img, .ticket-photo img, .ticket-poster img { cursor: zoom-in; }
+.tl-photos img:focus-visible, .polaroid img:focus-visible,
+.ticket-photo img:focus-visible, .ticket-poster img:focus-visible {
+  outline: 3px solid #C05B72; outline-offset: 3px;
+}
+body.lb-open { overflow: hidden; }
+
+/* display:grid below would otherwise beat the UA's [hidden]{display:none},
+   leaving an invisible overlay swallowing every click on the page. */
+.lb[hidden] { display: none; }
+
+.lb {
+  position: fixed; inset: 0; z-index: 100;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-areas: "bar bar bar" "prev stage next";
+  align-items: center;
+  gap: clamp(6px, 2vw, 20px);
+  padding: 0 clamp(8px, 2vw, 26px) clamp(16px, 3vw, 30px);
+  background: rgba(38, 26, 31, .96);
+  backdrop-filter: blur(6px);
+  animation: lb-in .18s ease;
+}
+@keyframes lb-in { from { opacity: 0; } to { opacity: 1; } }
+
+.lb-bar {
+  grid-area: bar;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 4px 10px;
+}
+.lb-count {
+  margin: 0; font-size: 12px; letter-spacing: .24em;
+  text-transform: uppercase; color: #C3A368;
+  font-variant-numeric: tabular-nums;
+}
+.lb-slash { margin: 0 7px; color: #8A6B74; }
+.lb-close {
+  background: none; border: 0; cursor: pointer; padding: 0;
+  width: 42px; height: 42px; border-radius: 50%;
+  font-size: 30px; line-height: 1; color: #F3DAD8;
+  transition: background .18s ease, color .18s ease;
+}
+.lb-close:hover { background: rgba(243, 218, 216, .14); color: #fff; }
+
+.lb-stage {
+  grid-area: stage; margin: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 16px; min-width: 0; height: 100%;
+}
+.lb-stage img {
+  max-width: 100%;
+  max-height: calc(100svh - 190px);
+  width: auto; object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
+  transition: opacity .2s ease;
+}
+.lb-stage img.is-loading { opacity: .25; }
+.lb-cap {
+  font-family: "Caveat", cursive; font-size: clamp(18px, 2.4vw, 23px);
+  color: #F3DAD8; text-align: center; max-width: 60ch;
+  min-height: 1.4em; line-height: 1.4; text-wrap: balance;
+}
+
+.lb-nav {
+  width: clamp(44px, 6vw, 60px); height: clamp(44px, 6vw, 60px);
+  border-radius: 50%; cursor: pointer;
+  border: 1px solid rgba(243, 218, 216, .26);
+  background: rgba(243, 218, 216, .08);
+  color: #F3DAD8; font-size: clamp(30px, 4vw, 40px); line-height: 0;
+  padding: 0 0 4px;
+  transition: background .18s ease, border-color .18s ease, opacity .18s ease;
+}
+.lb-prev { grid-area: prev; }
+.lb-next { grid-area: next; }
+.lb-nav:hover:not(:disabled) { background: rgba(243, 218, 216, .2); border-color: rgba(243, 218, 216, .5); }
+.lb-nav:disabled { opacity: .18; cursor: default; }
+.lb-close:focus-visible, .lb-nav:focus-visible { outline: 2px solid #C3A368; outline-offset: 3px; }
+
+/* On a phone the photo gets the full width and the arrows float over it --
+   swiping is the main gesture there anyway. */
+@media (max-width: 640px) {
+  .lb {
+    position: fixed; padding-inline: 8px; gap: 4px;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "bar" "stage";
+  }
+  .lb-stage img { max-height: calc(100svh - 170px); }
+  .lb-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 40px; height: 40px; font-size: 26px;
+    background: rgba(38, 26, 31, .55);
+    border-color: rgba(243, 218, 216, .34);
+  }
+  .lb-prev { left: 10px; }
+  .lb-next { right: 10px; }
+  .lb-nav:disabled { opacity: 0; pointer-events: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lb { animation: none; }
+  .lb-stage img, .lb-nav, .lb-close { transition: none; }
+}
+
