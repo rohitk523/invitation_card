@@ -19,9 +19,10 @@
     <a href="#story">Story</a>
     <a href="#movies">Movies</a>
     <a href="#her">Her</a>
-    <a href="#gate">Album</a>
-    <a href="#hands">Hands</a>
+    <a href="#with-family">Album</a>
+    <a href="#hands" hidden>Hands</a>
     <a href="#songs">Songs</a>
+    <a href="/api/auth/logout" class="nav-out">Sign out</a>
   </div>
 </nav>
 
@@ -72,25 +73,6 @@
     <div class="polaroids polaroids-duo" id="her-polaroids"></div>
   </section>
 
-  <!-- ============ FLOWER GATE ============ -->
-  <section class="section gate-section" id="gate">
-    <div class="gate-card" id="gate-card">
-      <p class="gate-flower" aria-hidden="true">🌷</p>
-      <h2 class="gate-title">Before the album opens…</h2>
-      <p class="gate-q">What are our favourite flowers?</p>
-      <form id="gate-form">
-        <input id="gate-input" type="text" autocomplete="off" autocapitalize="off"
-               placeholder="type your answer" aria-label="What are our favourite flowers?">
-        <button type="submit">Open the album</button>
-      </form>
-      <p class="gate-hint" id="gate-hint"></p>
-    </div>
-    <div class="gate-open" id="gate-open" hidden>
-      <p class="gate-flower" aria-hidden="true">🌷</p>
-      <p class="gate-welcome">You know us well. Welcome in.</p>
-    </div>
-  </section>
-
   <!-- ============ WITH AAI & BABA (family tier) ============ -->
   <section class="section locked" id="with-family" hidden>
     <p class="sec-eyebrow">already family</p>
@@ -106,21 +88,6 @@
     <h2 class="sec-title">The Day It All Got Fixed</h2>
     <p class="sec-note" id="fixing-day-line"></p>
     <div class="polaroids" id="fixing-day-polaroids"></div>
-  </section>
-
-  <!-- ============ JUST-US GATE (appears after family unlock) ============ -->
-  <section class="section gate-section" id="us-gate" hidden>
-    <div class="gate-card" id="us-gate-card">
-      <p class="gate-flower" aria-hidden="true">🔑</p>
-      <h2 class="gate-title">A door only two people have the key to</h2>
-      <p class="gate-q">When does forever begin?</p>
-      <form id="us-gate-form">
-        <input id="us-gate-input" type="text" autocomplete="off" autocapitalize="off"
-               placeholder="only we know this" aria-label="When does forever begin?">
-        <button type="submit">Just us</button>
-      </form>
-      <p class="gate-hint" id="us-gate-hint"></p>
-    </div>
   </section>
 
   <!-- ============ JUST US ALBUM (locked) ============ -->

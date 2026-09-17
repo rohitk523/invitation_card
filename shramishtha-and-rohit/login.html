@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Shramishtha &amp; Rohit</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌷</text></svg>">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Caveat:wght@500;600&family=Jost:wght@300;400;500&display=swap">
+<!-- Styles live here, not in styles.css: this is the only page a stranger
+     can load, so it must not depend on anything behind the door. -->
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100svh; display: grid; place-items: center;
+    padding: 28px 18px;
+    background:
+      radial-gradient(ellipse 90% 60% at 50% -10%, #F7E3DF 0%, rgba(247,227,223,0) 60%),
+      radial-gradient(ellipse 70% 50% at 50% 115%, #F2E4D2 0%, rgba(242,228,210,0) 60%),
+      #FBF5EC;
+    color: #46323A;
+    font-family: "Jost", "Avenir Next", "Segoe UI", sans-serif; font-weight: 300;
+  }
+  .card {
+    width: 100%; max-width: 430px; text-align: center;
+    background: #fff; border: 1px solid #EFE6D8; border-radius: 16px;
+    padding: clamp(28px, 6vw, 44px) clamp(20px, 5vw, 38px);
+    box-shadow: 0 18px 44px rgba(70, 50, 58, .13);
+  }
+  .flower { font-size: 34px; margin: 0 0 6px; }
+  .names { font-family: "Great Vibes", cursive; font-size: clamp(38px, 9vw, 52px); color: #7C2E48; margin: 0; line-height: 1.15; }
+  .sub { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 18px; color: #8A6B74; margin: 10px 0 26px; }
+  .g-btn {
+    display: flex; align-items: center; justify-content: center; gap: 11px;
+    width: 100%; padding: 13px 18px; cursor: pointer;
+    border: 1px solid #DFD3C3; border-radius: 999px; background: #fff;
+    font-family: inherit; font-size: 15px; color: #46323A; text-decoration: none;
+    transition: background .18s ease, border-color .18s ease;
+  }
+  .g-btn:hover { background: #FBF5EC; border-color: #C3A368; }
+  .g-btn svg { width: 18px; height: 18px; flex: none; }
+  .or { display: flex; align-items: center; gap: 12px; margin: 24px 0 18px; color: #B08D57; font-size: 11px; letter-spacing: .24em; text-transform: uppercase; }
+  .or::before, .or::after { content: ""; flex: 1; height: 1px; background: #EADFCE; }
+  label { display: block; font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #B08D57; margin-bottom: 8px; text-align: left; }
+  input {
+    width: 100%; padding: 12px 15px; font-family: inherit; font-size: 15.5px;
+    color: #46323A; background: #FBF5EC;
+    border: 1px solid #E7D6DA; border-radius: 10px;
+  }
+  input:focus { outline: 2px solid #C05B72; outline-offset: 1px; }
+  button.go {
+    width: 100%; margin-top: 12px; padding: 13px 18px; cursor: pointer;
+    background: #7C2E48; color: #F7E3DF; border: 0; border-radius: 999px;
+    font-family: inherit; font-size: 14px; letter-spacing: .16em; text-transform: uppercase;
+  }
+  button.go:hover { background: #8E3853; }
+  button.go:disabled { opacity: .6; cursor: default; }
+  .msg { min-height: 1.3em; margin: 16px 0 0; font-family: "Caveat", cursive; font-size: 18px; color: #C05B72; }
+  .foot { margin: 22px 0 0; font-size: 12px; color: #A08E93; line-height: 1.6; }
+  .shake { animation: shake .4s; }
+  @keyframes shake { 25% { transform: translateX(-7px); } 75% { transform: translateX(7px); } }
+  @media (prefers-reduced-motion: reduce) { .shake { animation: none; } }
+</style>
+</head>
+<body>
+<main class="card" id="card">
+  <p class="flower" aria-hidden="true">🌷</p>
+  <h1 class="names">Shramishtha &amp; Rohit</h1>
+  <p class="sub">A door, and two ways through it.</p>
+
+  <a class="g-btn" id="google" href="/api/auth/google/start">
+    <svg viewBox="0 0 48 48" aria-hidden="true">
+      <path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.8-.4-4H24v7.3h12.1c-.2 2-1.6 5-4.5 7l6.9 5.4c4.1-3.8 6.6-9.4 6.6-15.7z"/>
+      <path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-6.9-5.4c-1.9 1.3-4.4 2.2-7.6 2.2-5.8 0-10.7-3.8-12.5-9.1l-7.1 5.5C8.1 41.1 15.4 46 24 46z"/>
+      <path fill="#FBBC05" d="M11.5 28.4c-.5-1.4-.7-2.9-.7-4.4s.3-3 .7-4.4l-7.1-5.5C2.9 17 2 20.4 2 24s.9 7 2.4 9.9l7.1-5.5z"/>
+      <path fill="#EA4335" d="M24 10.6c3.2 0 5.4 1.4 6.7 2.6l6.1-6C33 3.8 29.9 2 24 2 15.4 2 8.1 6.9 4.4 14.1l7.1 5.5c1.8-5.3 6.7-9 12.5-9z"/>
+    </svg>
+    Sign in with Google
+  </a>
+
+  <p class="or">or</p>
+
+  <form id="form">
+    <label for="pass">Passphrase</label>
+    <input id="pass" type="password" autocomplete="current-password"
+           autocapitalize="off" spellcheck="false" placeholder="the phrase we sent you">
+    <button class="go" id="go" type="submit">Come in</button>
+  </form>
+
+  <p class="msg" id="msg" role="status" aria-live="polite"></p>
+  <p class="foot">Signing in with Google opens everything.<br>The passphrase opens the family album.</p>
+</main>
+
+<script>
+  const params = new URLSearchParams(location.search);
+  const next = params.get("next") || "/";
+  const msg = document.getElementById("msg");
+  const card = document.getElementById("card");
+  const go = document.getElementById("go");
+
+  document.getElementById("google").href =
+    "/api/auth/google/start?next=" + encodeURIComponent(next);
+
+  const REASONS = {
+    notinvited: "That account isn't on the list — try the passphrase below.",
+    unverified: "Google couldn't confirm that address.",
+    expired:    "That took a while — please try again.",
+    cancelled:  "Sign-in was cancelled.",
+    google:     "Google sign-in didn't complete. Try again?",
+  };
+  if (params.get("error")) msg.textContent = REASONS[params.get("error")] || "Something went wrong.";
+
+  document.getElementById("form").addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    go.disabled = true;
+    msg.textContent = "";
+    try {
+      const r = await fetch("/api/auth/passphrase", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ passphrase: document.getElementById("pass").value, next }),
+      });
+      if (r.ok) { location.href = (await r.json()).next || "/"; return; }
+      msg.textContent = r.status === 429
+        ? "Too many tries — wait a minute and try again."
+        : "That isn't the phrase. Have another go.";
+    } catch {
+      msg.textContent = "Couldn't reach the door. Check your connection?";
+    }
+    card.classList.remove("shake"); void card.offsetWidth; card.classList.add("shake");
+    document.getElementById("pass").select();
+    go.disabled = false;
+  });
+</script>
+</body>
+</html>

@@ -88,14 +88,16 @@ $("her-polaroids").innerHTML = SITE.her.photos.map((p, i) => `
     <figcaption>${p.caption}</figcaption>
   </figure>`).join("");
 
-/* ---------- two-tier gates: family album, then just-us ---------- */
-const FAMILY_KEY = "rs-album-open";
-const US_KEY = "rs-us-open";
-const flag = {
-  get: (k) => { try { return localStorage.getItem(k) === "yes"; } catch { return false; } },
-  set: (k) => { try { localStorage.setItem(k, "yes"); } catch { /* private mode is fine */ } },
-};
-function unlocked() { return flag.get(FAMILY_KEY); }
+/* ---------- what this visitor may see ----------
+   The server already decided this before a single byte was served. The cookie
+   below is only a hint for what to draw -- the real enforcement is in
+   middleware.js, and data-us.js / photos/us/ simply 404 for anyone else. */
+
+function tier() {
+  const m = document.cookie.match(/(?:^|;\s*)rs_tier=([^;]+)/);
+  return m ? decodeURIComponent(m[1]) : "family";
+}
+function unlocked() { return true; }   // signed in at all == the family album
 
 function polaroids(list) {
   const tilts = [-2.4, 1.8, -1.2, 2.6, -2, 1.4, -1.8, 2.2];
@@ -106,7 +108,7 @@ function polaroids(list) {
     </figure>`).join("");
 }
 
-function openFamily() {
+function showFamily() {
   $("with-family-line").textContent = SITE.withFamily.line;
   $("with-family-polaroids").innerHTML = polaroids(SITE.withFamily.photos);
   $("with-family-moments").innerHTML = (SITE.withFamily.moments ?? []).map((m) => `
@@ -116,68 +118,44 @@ function openFamily() {
     </article>`).join("");
   $("fixing-day-line").textContent = SITE.fixingDay.line;
   $("fixing-day-polaroids").innerHTML = polaroids(SITE.fixingDay.photos);
-  renderTickets();
   $("with-family").hidden = false;
   $("fixing-day").hidden = false;
-  $("us-gate").hidden = flag.get(US_KEY);
-  $("gate-card").hidden = true;
-  $("gate-open").hidden = false;
 }
 
-function openUs() {
-  $("us-polaroids").innerHTML = polaroids(SITE.usAlbum);
-  $("hands-line").textContent = SITE.hands.line;
-  $("hands-row").innerHTML = SITE.hands.photos.map((p) => `
+function showUs() {
+  $("us-polaroids").innerHTML = polaroids(US.usAlbum);
+  $("hands-line").textContent = US.hands.line;
+  $("hands-row").innerHTML = US.hands.photos.map((p) => `
     <figure class="polaroid">
       <img src="${p.src}" alt="Our hands, together — ${p.caption}" loading="lazy">
       <figcaption>${p.caption}</figcaption>
     </figure>`).join("");
-  $("apology-title").textContent = SITE.apology.title;
+  $("apology-title").textContent = US.apology.title;
   $("apology-body").innerHTML =
-    SITE.apology.paragraphs.map((p) => `<p>${p}</p>`).join("") +
-    `<p class="apology-signoff">${SITE.apology.signoff}</p>`;
+    US.apology.paragraphs.map((p) => `<p>${p}</p>`).join("") +
+    `<p class="apology-signoff">${US.apology.signoff}</p>`;
   $("us-album").hidden = false;
   $("hands").hidden = false;
   $("apology").hidden = false;
-  $("us-gate").hidden = true;
+  document.querySelector('.nav-links a[href="#hands"]').hidden = false;
 }
 
-if (flag.get(FAMILY_KEY)) openFamily();
-if (flag.get(FAMILY_KEY) && flag.get(US_KEY)) openUs();
+/* Fetched rather than hard-linked in the page: for anyone but the two of them
+   this request is refused, and there is nothing to render. */
+function loadUsContent() {
+  return new Promise((resolve, reject) => {
+    const tag = document.createElement("script");
+    tag.src = "data-us.js";
+    tag.onload = resolve;
+    tag.onerror = () => reject(new Error("not permitted"));
+    document.head.appendChild(tag);
+  });
+}
 
-$("gate-form").addEventListener("submit", (ev) => {
-  ev.preventDefault();
-  const answer = $("gate-input").value.trim();
-  if (SITE.flowerAnswer.test(answer)) {
-    flag.set(FAMILY_KEY);
-    openFamily();
-    document.getElementById("with-family").scrollIntoView({ behavior: "smooth" });
-  } else {
-    const card = $("gate-card");
-    card.classList.remove("shake");
-    void card.offsetWidth;
-    card.classList.add("shake");
-    $("gate-hint").textContent = "Not quite — think of our favourite spring flower…";
-    $("gate-input").select();
-  }
-});
-
-$("us-gate-form").addEventListener("submit", (ev) => {
-  ev.preventDefault();
-  const digits = $("us-gate-input").value.replace(/\D/g, "");
-  if (digits === SITE.usAnswer) {
-    flag.set(US_KEY);
-    openUs();
-    document.getElementById("us-album").scrollIntoView({ behavior: "smooth" });
-  } else {
-    const card = $("us-gate-card");
-    card.classList.remove("shake");
-    void card.offsetWidth;
-    card.classList.add("shake");
-    $("us-gate-hint").textContent = "This door stays shut. It only opens for two people.";
-    $("us-gate-input").select();
-  }
-});
+showFamily();
+if (tier() === "us") {
+  loadUsContent().then(showUs).catch(() => { /* not ours to show */ });
+}
 
 /* ---------- songs / places / letters ---------- */
 $("songs-list").innerHTML = SITE.songs.length

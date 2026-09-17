@@ -1,4 +1,6 @@
-// All site content lives here — edit this file, redeploy, done.
+// Content everyone who signs in may see.
+// The just-us material lives in data-us.js, which the server only
+// serves to a verified Google account — never put it back in here.
 // Entries marked [sample] are placeholders waiting for the real story.
 const SITE = {
   bride: "Shramishtha",
@@ -7,10 +9,6 @@ const SITE = {
   weddingISO: "2027-01-29T00:00:00+05:30", // muhurat time TBC
   engagementLine: "Sunday, 13 September 2026 · Hotel NeelKamal, Beed",
   weddingLine: "Friday, 29 January 2027",
-  flowerAnswer: /tulip/i,
-  // "Just Us" door — placeholder secret: the wedding date as ddmmyyyy.
-  // Change this to something only the two of you would ever guess.
-  usAnswer: "29012027",
 
   story: [
     {
@@ -117,31 +115,7 @@ const SITE = {
     ],
   },
 
-  usAlbum: [
-    { src: "photos/p1.jpg", caption: "The balloon evening — 3 July 2026" },
-    { src: "photos/p3.jpg", caption: "Let coffee connect us" },
-    { src: "photos/p5.jpg", caption: "The apology roses — 30 August 2026" },
-    { src: "photos/p6.jpg", caption: "That smile, mid-laugh" },
-    { src: "photos/p9.jpg", caption: "Fort View Adventure Resort — hunting for where forever begins" },
-    { src: "photos/engagement/e1.jpg", caption: "13 September — official, with witnesses" },
-    { src: "photos/engagement/e2.jpg", caption: "The saree, and the lucky guy next to it" },
-    { src: "photos/engagement/e4.jpg", caption: "Mid-conversation, mid-forever" },
-    { src: "photos/engagement/e5.jpg", caption: "A kiss on the hand that said yes" },
-    { src: "photos/engagement/e3.jpg", caption: "Reception mode: lavender and velvet" },
-    { src: "photos/engagement/e6.jpg", caption: "Her gown brought its own lighting crew" },
-    { src: "photos/engagement/e7.jpg", caption: "Walking into the rest of it" },
-    { src: "photos/engagement/e8.jpg", caption: "The twirl. The whole venue watched." },
-    { src: "photos/engagement/e9.jpg", caption: "Rings on, hands touching — R & S in mehendi" },
-  ],
 
-  hands: {
-    line: "And in every photo, our hands found each other.",
-    photos: [
-      { src: "photos/p2.jpg", caption: "3 July 2026" },
-      { src: "photos/p4.jpg", caption: "Arm in arm" },
-      { src: "photos/engagement/e9.jpg", caption: "The rings — 13 September 2026" },
-    ],
-  },
 
   songs: [], // the list begins the day the first song is chosen
 
@@ -150,15 +124,4 @@ const SITE = {
   ],
 
   // Behind the just-us door. Sincere on purpose — no jokes in this one.
-  apology: {
-    title: "An Apology to the One I Love",
-    paragraphs: [
-      "I am putting this into words because I need to take profound and complete accountability. Recently, I let my own insecurities and overthinking cloud my judgment, and in doing so, I deeply hurt the person I care about most.",
-      "I jumped to conclusions and made unfair assumptions. In a moment where I should have led with trust and open communication, I reacted from a place of fear and doubt. You have always been honest, loving, and steadfast, and you did not deserve to have your character or your intentions questioned.",
-      "I know now that my reaction was a reflection of my own internal struggles, not of anything you did wrong. By projecting my insecurities onto you, I caused unnecessary pain and made you feel unvalued. For that, I am so incredibly sorry.",
-      "Love is about taking ownership when you are wrong — and I was wrong. I promise to do better. I promise to listen to you with an open heart, to trust the beautiful bond we share, and to pause and communicate my feelings before jumping to conclusions.",
-      "You mean the world to me. I deeply regret causing you pain, and I will spend every day working to be the secure, understanding, and supportive partner you truly deserve.",
-    ],
-    signoff: "— Rohit",
-  },
 };

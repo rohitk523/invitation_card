@@ -445,3 +445,6 @@ body.lb-open { overflow: hidden; }
   .lb-stage img, .lb-nav, .lb-close { transition: none; }
 }
 
+/* ---------- sign out ---------- */
+.nav-out { margin-left: 6px; opacity: .72; }
+.nav-out::before { content: "·"; margin-right: 10px; color: #CBB9BE; }
