@@ -88,6 +88,16 @@ $("her-polaroids").innerHTML = SITE.her.photos.map((p, i) => `
     <figcaption>${p.caption}</figcaption>
   </figure>`).join("");
 
+/* ---------- the engagement reel ---------- */
+$("reel-line").textContent = SITE.reel.line;
+$("reel-frame").innerHTML = `
+  <video controls preload="metadata" playsinline
+         poster="${SITE.reel.poster}" aria-label="${SITE.reel.caption}">
+    <source src="${SITE.reel.src}" type="video/mp4">
+    Your browser can't play this one — the file is ${SITE.reel.src}.
+  </video>
+  <figcaption>${SITE.reel.caption}</figcaption>`;
+
 /* ---------- what this visitor may see ----------
    The server already decided this before a single byte was served. The cookie
    below is only a hint for what to draw -- the real enforcement is in
@@ -167,9 +177,58 @@ $("songs-list").innerHTML = SITE.songs.length
       </li>`).join("")
   : `<li class="songs-empty">We haven&rsquo;t chosen our first song yet. The list begins the day we do. ♪</li>`;
 
-$("letters-list").innerHTML = SITE.letters.map((l) => `
-  <article class="letter">
-    <div class="letter-seal">${l.from[0]}</div>
-    <p class="letter-from">From ${l.from}</p>
-    <p class="letter-note">${l.note}</p>
-  </article>`).join("");
+/* ---------- letters ----------
+   The text lives on the server and is refused until the date passes, so the
+   seal is real rather than drawn on. */
+function letterCard(l) {
+  const when = new Date(`${l.openOn}T00:00:00+05:30`)
+    .toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+  return `
+    <article class="letter${l.sealed ? " is-sealed" : ""}" data-id="${l.id}">
+      <div class="letter-seal">${l.from[0]}</div>
+      <p class="letter-from">From ${l.from}</p>
+      <p class="letter-note">${l.note}</p>
+      <p class="letter-when">${l.sealed ? `opens ${when}` : `opened ${when}`}</p>
+      ${l.sealed ? "" : `<button type="button" class="letter-open">Read it</button>`}
+      <div class="letter-body" hidden></div>
+    </article>`;
+}
+
+async function renderLetters() {
+  if (tier() !== "us") {
+    $("letters-list").innerHTML =
+      `<p class="letters-note">The sealed letters are behind the other door.</p>`;
+    return;
+  }
+  try {
+    const r = await fetch("/api/letter", { credentials: "include" });
+    if (!r.ok) throw new Error("refused");
+    const { letters } = await r.json();
+    $("letters-list").innerHTML = letters.map(letterCard).join("");
+  } catch {
+    $("letters-list").innerHTML = `<p class="letters-note">Couldn't fetch the letters just now.</p>`;
+  }
+}
+
+$("letters-list").addEventListener("click", async (ev) => {
+  const btn = ev.target.closest(".letter-open");
+  if (!btn) return;
+  const card = btn.closest(".letter");
+  btn.disabled = true;
+  const r = await fetch(`/api/letter?id=${encodeURIComponent(card.dataset.id)}`,
+                        { credentials: "include" });
+  const data = await r.json();
+  const body = card.querySelector(".letter-body");
+  body.innerHTML = r.ok
+    ? data.body.map((para) => `<p>${para}</p>`).join("")
+    : `<p>${data.error === "still sealed" ? "Not yet." : "Couldn't open that one."}</p>`;
+  body.hidden = false;
+  btn.remove();
+});
+
+renderLetters();
+
+/* ---------- print ----------
+   Everything is on one page already, so the browser's own print-to-PDF is the
+   whole feature; the stylesheet does the work. */
+$("print-btn").addEventListener("click", () => window.print());

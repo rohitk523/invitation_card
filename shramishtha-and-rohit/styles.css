@@ -448,3 +448,63 @@ body.lb-open { overflow: hidden; }
 /* ---------- sign out ---------- */
 .nav-out { margin-left: 6px; opacity: .72; }
 .nav-out::before { content: "·"; margin-right: 10px; color: #CBB9BE; }
+
+/* ---------- the reel ---------- */
+.reel-frame { margin: 38px auto 0; max-width: 620px; text-align: center; }
+.reel-frame video {
+  width: 100%; height: auto; display: block;
+  background: #2A1C21; border-radius: 12px;
+  border: 5px solid #fff;
+  box-shadow: 0 18px 44px rgba(70, 50, 58, .18);
+}
+.reel-frame figcaption {
+  font-family: "Caveat", cursive; font-size: 19px; color: #6E5560; padding-top: 12px;
+}
+
+/* ---------- print / save as PDF ---------- */
+.print-btn {
+  display: inline-block; margin: 26px auto 0; cursor: pointer;
+  background: none; border: 1px solid #DCC9CE; border-radius: 999px;
+  padding: 10px 22px; font-family: inherit; font-size: 11.5px;
+  letter-spacing: .2em; text-transform: uppercase; color: #8A6B74;
+}
+.print-btn:hover { border-color: #C05B72; color: #7C2E48; }
+
+@media print {
+  /* Anything you can click, scroll or play means nothing on paper. */
+  .nav, .petals, .scroll-hint, .countdown, .lb, .print-btn,
+  .reel-frame, .apology-link, .nav-out { display: none !important; }
+
+  html { scroll-behavior: auto; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .hero { min-height: auto; padding: 0 0 18pt; background: none; }
+  .hero-names { font-size: 32pt; }
+  .section, .hands { padding: 0 0 18pt; max-width: none; }
+  .hands { background: none; color: #000; }
+  .hands-line, .hands-foot { color: #444; }
+
+  /* A section should not start two lines before a page turn. */
+  .section, .hands { break-inside: avoid-page; }
+  .sec-title { break-after: avoid-page; }
+  figure, .ticket, .letter, .moment, li { break-inside: avoid; }
+
+  .polaroids { grid-template-columns: repeat(3, 1fr); gap: 10pt; }
+  .polaroid { box-shadow: none; transform: none; border: 1px solid #ccc; padding: 5pt; }
+  .polaroid::before { display: none; }
+  .tl-photos { grid-template-columns: repeat(3, 1fr); max-width: none; }
+  .polaroid img, .tl-photos img { border-width: 1px; box-shadow: none; }
+  a { color: #000; text-decoration: none; }
+}
+
+/* ---------- sealed letters ---------- */
+.letter-when { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #B08D57; margin: 8px 0 0; }
+.letter.is-sealed { opacity: .82; }
+.letter-open {
+  margin-top: 12px; cursor: pointer; background: #7C2E48; color: #F7E3DF;
+  border: 0; border-radius: 999px; padding: 8px 18px;
+  font-family: inherit; font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+}
+.letter-open:hover { background: #8E3853; }
+.letter-body { margin-top: 12px; font-family: "Cormorant Garamond", serif; font-size: 16.5px; color: #4E3A42; }
+.letter-body p { margin: 0 0 10px; }
+.letters-note { font-family: "Caveat", cursive; font-size: 19px; color: #8A6B74; text-align: center; }

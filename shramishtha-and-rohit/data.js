@@ -76,6 +76,14 @@ const SITE = {
     },
   ],
 
+  // The engagement film. Sits behind the same door as everything else.
+  reel: {
+    line: "Thirty-eight seconds of 13 September, with the song she picked.",
+    src: "media/reel-sajna.mp4",
+    poster: "media/reel-poster.jpg",
+    caption: "Engagement reel · Sajna",
+  },
+
   // Her own gallery — add photos to photos/her/ and list them here.
   her: {
     line: "Some people deserve a whole section to themselves. The management (me) fully agrees.",
@@ -117,11 +125,21 @@ const SITE = {
 
 
 
-  songs: [], // the list begins the day the first song is chosen
-
-  letters: [
-    { from: "Rohit", note: "Sealed. To be opened on a very special day, years from now." },
+  songs: [
+    {
+      title: "Sajna — Darshan Raval",
+      note: "The one under our engagement reel. Chosen by her, obviously.",
+    },
+    {
+      title: "Aaj Sajeya — Goldie Sohel",
+      note: "The louder alternative. Still in the running.",
+    },
+    {
+      title: "Inaam — Jasleen Royal",
+      note: "Playing under all three invitation films.",
+    },
   ],
+
 
   // Behind the just-us door. Sincere on purpose — no jokes in this one.
 };
