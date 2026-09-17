@@ -1,3 +1,13 @@
 .env
 node_modules/
 out/
+
+# Source media — large, kept locally. GitHub hard-rejects >100MB
+# (the engagement reel alone is 144MB). Delivered cuts live in out/.
+*.mp4
+*.mov
+*.webm
+*.mp3
+*.m4a
+*.wav
+.DS_Store
