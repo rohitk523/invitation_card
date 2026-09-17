@@ -17,6 +17,11 @@ export const config = {
 const OPEN = new Set(["/login", "/login.html", "/favicon.ico"]);
 const isOpen = (path) => OPEN.has(path) || path.startsWith("/api/auth/");
 
+/* Vercel withholds middleware.js, package.json and api/ from the static output,
+   but lib/ is just a folder and would otherwise be published. Nothing secret
+   lives there, but there's no reason to hand out the auth internals. */
+const isSource = (path) => path.startsWith("/lib/");
+
 /* Content that belongs to the two of them alone, whatever else you signed in as. */
 const usOnly = (path) =>
   path === "/data-us.js" || path.startsWith("/photos/us/");
@@ -51,6 +56,10 @@ export default async function middleware(req) {
       status: 503,
       headers: { "cache-control": "private, no-store" },
     });
+  }
+
+  if (isSource(pathname)) {
+    return new Response("Not found", { status: 404, headers: { "cache-control": "private, no-store" } });
   }
 
   const claims = await verify(readCookie(req.headers.get("cookie"), COOKIE), secret);
