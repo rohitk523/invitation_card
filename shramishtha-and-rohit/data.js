@@ -85,7 +85,7 @@ const SITE = {
       venue: "INOX, Prozone Mall · Sambhajinagar · Screen 3",
       seats: "D-10 & D-11",
       note: "An A-rated crime thriller, which she agreed to with confidence and then watched approximately forty percent of — the rest was observed from behind a dupatta. Worth it for the photo alone.",
-      poster: null,
+      poster: "photos/poster-daayra.jpg",
       photos: [
         { src: "photos/movies/daayra-her.jpg", caption: "Row D, mid-film, fully fortified." },
         { src: "photos/movies/daayra-ticket.jpg", caption: "Two seats, as always." },
