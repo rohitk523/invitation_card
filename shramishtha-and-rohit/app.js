@@ -56,8 +56,13 @@ $("timeline").innerHTML = SITE.story.map((e) => `
 
 /* ---------- movie tickets ---------- */
 function ticketPhoto(m) {
-  if (!m.photo || !unlocked()) return "";
-  return `<div class="ticket-photo"><img src="${m.photo}" alt="Photo from ${m.title}" loading="lazy"></div>`;
+  const shots = m.photos ?? (m.photo ? [{ src: m.photo, caption: `Photo from ${m.title}` }] : []);
+  if (!shots.length || !unlocked()) return "";
+  return shots.map((p) => `
+    <figure class="ticket-photo">
+      <img src="${p.src}" alt="${p.caption}" loading="lazy">
+      <figcaption>${p.caption}</figcaption>
+    </figure>`).join("");
 }
 function ticketPoster(m) {
   if (!m.poster) return "";
@@ -68,7 +73,7 @@ function renderTickets() {
     <article class="ticket">
       <div class="ticket-head">
         <span class="ticket-admit">Admit Two</span>
-        <span class="ticket-seat">Seats R &amp; S</span>
+        <span class="ticket-seat">Seats ${m.seats ?? "R &amp; S"}</span>
       </div>
       ${ticketPoster(m)}
       <h3 class="ticket-title">${m.title}</h3>
@@ -87,6 +92,24 @@ $("her-polaroids").innerHTML = SITE.her.photos.map((p, i) => `
     <img src="${p.src}" alt="${p.caption}" loading="lazy">
     <figcaption>${p.caption}</figcaption>
   </figure>`).join("");
+
+/* ---------- a day out ----------
+   Stops arrive one at a time; a stop with no photos yet still earns its card. */
+$("outing-date").textContent = SITE.outing.date;
+$("outing-line").textContent = SITE.outing.line;
+$("outing-stops").innerHTML = SITE.outing.stops.map((s) => `
+  <article class="stop">
+    <div class="stop-head">
+      <h3 class="stop-place">${s.place}</h3>
+      ${s.badge ? `<span class="stop-badge">${s.badge}</span>` : ""}
+    </div>
+    <p class="stop-note">${s.note}</p>
+    ${s.photos?.length ? `<div class="stop-photos">${s.photos.map((p) => `
+      <figure class="polaroid" style="--tilt:-1.5deg">
+        <img src="${p.src}" alt="${p.caption}" loading="lazy">
+        <figcaption>${p.caption}</figcaption>
+      </figure>`).join("")}</div>` : ""}
+  </article>`).join("");
 
 /* ---------- the engagement reel ---------- */
 $("reel-line").textContent = SITE.reel.line;

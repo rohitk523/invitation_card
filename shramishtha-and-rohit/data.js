@@ -50,6 +50,11 @@ const SITE = {
       ],
     },
     {
+      date: "20 September 2026",
+      title: "The Sunday we did everything",
+      note: "Ghrishneshwar, Ellora, Daulatabad, a VR headset and a crime thriller — in one day, on one tank of patience.",
+    },
+    {
       date: "29 January 2027",
       title: "The wedding",
       note: "The day every countdown on this page is running toward.",
@@ -64,7 +69,7 @@ const SITE = {
       venue: "Anjali Cinema Hall · Sambhajinagar",
       note: "Perfect seats, perfect time. Also the site of a major scientific discovery: hands side by side, she turned out to be moonlight and I'm double-roast coffee. We're calling it contrast — it's what makes a photo good.",
       poster: "photos/poster-hjtihh.jpg",
-      photo: null,
+      photos: [],
     },
     {
       title: "Ohh My Dog",
@@ -72,9 +77,44 @@ const SITE = {
       venue: "INOX, Prozone Mall · Sambhajinagar",
       note: "We skipped Spider-Man for this one — best decision. The film was great, and somewhere in that dark hall, the first movie hand-hold happened. Goosebumps.",
       poster: "photos/poster-ohhmydog.jpg",
-      photo: null,
+      photos: [],
+    },
+    {
+      title: "Daayra",
+      date: "20 September 2026",
+      venue: "INOX, Prozone Mall · Sambhajinagar · Screen 3",
+      seats: "D-10 & D-11",
+      note: "An A-rated crime thriller, which she agreed to with confidence and then watched approximately forty percent of — the rest was observed from behind a dupatta. Worth it for the photo alone.",
+      poster: null,
+      photos: [
+        { src: "photos/movies/daayra-her.jpg", caption: "Row D, mid-film, fully fortified." },
+        { src: "photos/movies/daayra-ticket.jpg", caption: "Two seats, as always." },
+      ],
     },
   ],
+
+  // Sunday 20 September 2026 — one day, several stops.
+  // Ellora caves and Daulatabad fort still to come; add them as stops below
+  // once Rohit sends the photos.
+  outing: {
+    date: "Sunday, 20 September 2026",
+    line: "One Sunday, and most of Sambhajinagar's greatest hits.",
+    stops: [
+      {
+        place: "Ghrishneshwar Temple",
+        badge: "1 of 12",
+        note: "The twelfth Jyotirlinga, and the first one we have stood in front of together. Eleven to go — we are treating that as an itinerary rather than a statistic.",
+        photos: [],
+      },
+      {
+        place: "Prozone Mall",
+        note: "Virtual reality first, where she was handed a headset and immediately went somewhere I could not follow. Then Daayra at INOX, two floors down.",
+        photos: [
+          { src: "photos/outings/prozone-vr.jpg", caption: "Somewhere else entirely." },
+        ],
+      },
+    ],
+  },
 
   // The engagement film. Sits behind the same door as everything else.
   reel: {
