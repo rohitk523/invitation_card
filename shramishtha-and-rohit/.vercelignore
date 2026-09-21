@@ -1,3 +1,7 @@
-*.mp4
+# Source media stays local. Note: negation (!media/*.mp4) is NOT honoured by
+# the real build even though `vercel dev` respects it -- it silently dropped
+# every video. Anchored patterns only: /*.mp4 matches this directory alone,
+# leaving media/ deployable.
+/*.mp4
 *.mp3
-!media/*.mp4
+node_modules
