@@ -117,19 +117,19 @@
   </div>
 
   <figure class="photo">
-    <img src="photos/us/apology.jpg" alt="Rohit holding his ear — the traditional sorry">
+    <img src="photos/album/apology.jpg" alt="Rohit holding his ear — the traditional sorry">
     <figcaption>Sorry, said the traditional way. Ear held until forgiven.</figcaption>
   </figure>
 
   <a class="back" href="./">← back to our diary</a>
 </div>
 
-<script src="data-us.js"></script>
+<script src="data.js"></script>
 <script>
-  document.getElementById("letter-title").textContent = US.apology.title;
+  document.getElementById("letter-title").textContent = SITE.apology.title;
   document.getElementById("letter-body").innerHTML =
-    US.apology.paragraphs.map((p) => `<p>${p}</p>`).join("") +
-    `<p class="signoff">${US.apology.signoff}</p>`;
+    SITE.apology.paragraphs.map((p) => `<p>${p}</p>`).join("") +
+    `<p class="signoff">${SITE.apology.signoff}</p>`;
 </script>
 </body>
 </html>

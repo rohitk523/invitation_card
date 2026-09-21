@@ -99,16 +99,11 @@ $("her-polaroids").innerHTML = SITE.her.photos.map((p, i) => `
     <figcaption>${p.caption}</figcaption>
   </figure>`).join("");
 
-/* ---------- what this visitor may see ----------
-   The server already decided this before a single byte was served. The cookie
-   below is only a hint for what to draw -- the real enforcement is in
-   middleware.js, and data-us.js / photos/us/ simply 404 for anyone else. */
+/* ---------- rendering ----------
+   One level of access now: sign in and you see everything. The middleware
+   still refuses every byte to anyone without a session. */
 
-function tier() {
-  const m = document.cookie.match(/(?:^|;\s*)rs_tier=([^;]+)/);
-  return m ? decodeURIComponent(m[1]) : "family";
-}
-function unlocked() { return true; }   // signed in at all == the family album
+function unlocked() { return true; }   // signed in at all means you see it all
 
 function polaroids(list) {
   const tilts = [-2.4, 1.8, -1.2, 2.6, -2, 1.4, -1.8, 2.2];
@@ -131,31 +126,17 @@ function showFamily() {
 }
 
 function showUs() {
-  $("us-polaroids").innerHTML = polaroids(US.usAlbum);
-  $("apology-title").textContent = US.apology.title;
+  $("us-polaroids").innerHTML = polaroids(SITE.usAlbum);
+  $("apology-title").textContent = SITE.apology.title;
   $("apology-body").innerHTML =
-    US.apology.paragraphs.map((p) => `<p>${p}</p>`).join("") +
-    `<p class="apology-signoff">${US.apology.signoff}</p>`;
+    SITE.apology.paragraphs.map((p) => `<p>${p}</p>`).join("") +
+    `<p class="apology-signoff">${SITE.apology.signoff}</p>`;
   $("us-album").hidden = false;
   $("apology").hidden = false;
 }
 
-/* Fetched rather than hard-linked in the page: for anyone but the two of them
-   this request is refused, and there is nothing to render. */
-function loadUsContent() {
-  return new Promise((resolve, reject) => {
-    const tag = document.createElement("script");
-    tag.src = "data-us.js";
-    tag.onload = resolve;
-    tag.onerror = () => reject(new Error("not permitted"));
-    document.head.appendChild(tag);
-  });
-}
-
 showFamily();
-if (tier() === "us") {
-  loadUsContent().then(showUs).catch(() => { /* not ours to show */ });
-}
+showUs();
 
 /* ---------- songs / places / letters ---------- */
 $("songs-list").innerHTML = SITE.songs.length
@@ -185,11 +166,6 @@ function letterCard(l) {
 }
 
 async function renderLetters() {
-  if (tier() !== "us") {
-    $("letters-list").innerHTML =
-      `<p class="letters-note">The sealed letters are behind the other door.</p>`;
-    return;
-  }
   try {
     const r = await fetch("/api/letter", { credentials: "include" });
     if (!r.ok) throw new Error("refused");

@@ -1,7 +1,7 @@
 /* Hands over a letter's text, but only to the two of them and only once the
    date has passed. Before that the body never leaves the server. */
 
-import { COOKIE, TIER, allows, readCookie, verify } from "../lib/session.js";
+import { COOKIE, readCookie, verify } from "../lib/session.js";
 import { LETTERS, publicFace, sealed } from "../lib/letters.js";
 
 export default async function handler(req, res) {
@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   if (!secret) { res.status(503).json({ error: "unconfigured" }); return; }
 
   const claims = await verify(readCookie(req.headers.cookie, COOKIE), secret);
-  if (!allows(claims, TIER.US)) { res.status(401).json({ error: "not yours" }); return; }
+  if (!claims) { res.status(401).json({ error: "not yours" }); return; }
 
   res.setHeader("Cache-Control", "private, no-store");
   const now = new Date();

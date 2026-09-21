@@ -4,7 +4,7 @@
    doesn't get bytes. */
 
 import { next } from "@vercel/edge";
-import { COOKIE, TIER, allows, cookiesFor, issue, readCookie, verify, worthRenewing }
+import { COOKIE, cookiesFor, issue, readCookie, verify, worthRenewing }
   from "./lib/session.js";
 
 export const config = {
@@ -21,10 +21,6 @@ const isOpen = (path) => OPEN.has(path) || path.startsWith("/api/auth/");
    but lib/ is just a folder and would otherwise be published. Nothing secret
    lives there, but there's no reason to hand out the auth internals. */
 const isSource = (path) => path.startsWith("/lib/");
-
-/* Content that belongs to the two of them alone, whatever else you signed in as. */
-const usOnly = (path) =>
-  path === "/data-us.js" || path.startsWith("/photos/us/");
 
 function deny(req, path) {
   /* An asset request gets a plain 401 -- bouncing an <img> to an HTML login
@@ -64,7 +60,6 @@ export default async function middleware(req) {
 
   const claims = await verify(readCookie(req.headers.get("cookie"), COOKIE), secret);
   if (!claims) return deny(req, pathname);
-  if (usOnly(pathname) && !allows(claims, TIER.US)) return deny(req, pathname);
 
   const headers = new Headers({ "cache-control": "private, no-store" });
 
