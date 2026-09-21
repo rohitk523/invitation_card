@@ -48,6 +48,9 @@ const SITE = {
         { src: "photos/engagement/e7.jpg", alt: "Walking together at the reception" },
         { src: "photos/engagement/e8.jpg", alt: "Her twirl in the lavender gown" },
       ],
+      videos: [
+        { src: "media/engagement-reel.mp4", poster: "media/engagement-reel-poster.jpg", alt: "Our engagement reel" },
+      ],
     },
     {
       date: "20 September 2026",
@@ -100,7 +103,7 @@ const SITE = {
     {
       date: "20 September 2026 · evening",
       title: "Prozone Mall",
-      note: "A headset that took her somewhere I could not follow, and then Daayra at INOX — an A-rated thriller watched largely from behind a dupatta.",
+      note: "A headset that took her somewhere I could not follow, and then Daayra at INOX — watched from under a shawl, because the air conditioning was set to arctic.",
       photos: [
         { src: "photos/day/prozone-1.jpg", alt: "Prozone Mall" },
         { src: "photos/day/prozone-2.jpg", alt: "Prozone Mall" },
@@ -139,7 +142,7 @@ const SITE = {
       date: "20 September 2026",
       venue: "INOX, Prozone Mall · Sambhajinagar · Screen 3",
       seats: "D-10 & D-11",
-      note: "An A-rated crime thriller, which she agreed to with confidence and then watched approximately forty percent of — the rest was observed from behind a dupatta. Worth it for the photo alone.",
+      note: "A crime thriller, watched almost entirely from under a shawl — INOX had the air conditioning somewhere near polar, and she feels the cold more than anyone I know. The film was good. The AC was the villain.",
       poster: "photos/poster-daayra.jpg",
       photos: [
         { src: "photos/movies/daayra-her.jpg", caption: "Row D, mid-film, fully fortified." },
@@ -147,14 +150,6 @@ const SITE = {
       ],
     },
   ],
-
-  // The engagement film. Sits behind the same door as everything else.
-  reel: {
-    line: "Thirty-eight seconds of 13 September, with the song she picked.",
-    src: "media/reel-sajna.mp4",
-    poster: "media/reel-poster.jpg",
-    caption: "Engagement reel · Sajna",
-  },
 
   // Her own gallery — add photos to photos/her/ and list them here.
   her: {
@@ -174,23 +169,11 @@ const SITE = {
   },
 
   withFamily: {
-    line: "Some people arrive and simply belong — on both sides. These frames say it better than words ever could.",
+    line: "Some people arrive and simply belong — on both sides. Including the June afternoon in Chhatrapati Sambhajinagar when both homes said yes.",
     photos: [
       { src: "photos/with-family/f1.jpg", caption: "Her hand on Aai's shoulder — Aai couldn't wait to tell me" },
       { src: "photos/with-family/f2.jpg", caption: "Aai, Baba & her — one happy frame" },
       { src: "photos/with-family/f3.jpg", caption: "Her birthday lunch, with her family" },
-    ],
-    moments: [
-      {
-        title: "Prozone Mall, bodyguard duty",
-        text: "Aai walking ahead, her future daughter-in-law stationed right behind — ready for any fall that dared to happen. Aai noticed. Aai approved. I just paid for parking.",
-      },
-    ],
-  },
-
-  fixingDay: {
-    line: "Chhatrapati Sambhajinagar — one afternoon, every blessing we needed.",
-    photos: [
       { src: "photos/fixing-the-wedding/w1.jpg", caption: "The new family — mine now too" },
       { src: "photos/fixing-the-wedding/w2.jpg", caption: "Her younger brother — the approval committee of one" },
       { src: "photos/fixing-the-wedding/w3.jpg", caption: "Mama & Mami" },
@@ -201,24 +184,18 @@ const SITE = {
       { src: "photos/with-family/f4.jpg", caption: "The cousins' squad" },
       { src: "photos/with-family/f5.jpg", caption: "Her mother, the mamas & mavshi" },
     ],
+    moments: [
+      {
+        title: "Prozone Mall, bodyguard duty",
+        text: "Aai walking ahead, her future daughter-in-law stationed right behind — ready for any fall that dared to happen. Aai noticed. Aai approved. I just paid for parking.",
+      },
+    ],
   },
 
 
 
-  songs: [
-    {
-      title: "Sajna — Darshan Raval",
-      note: "The one under our engagement reel. Chosen by her, obviously.",
-    },
-    {
-      title: "Aaj Sajeya — Goldie Sohel",
-      note: "The louder alternative. Still in the running.",
-    },
-    {
-      title: "Inaam — Jasleen Royal",
-      note: "Playing under all three invitation films.",
-    },
-  ],
+
+  songs: [], // the list begins the day the first song is chosen
 
 
   // Behind the just-us door. Sincere on purpose — no jokes in this one.

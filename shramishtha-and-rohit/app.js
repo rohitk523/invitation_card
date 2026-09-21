@@ -62,11 +62,13 @@ $("timeline").innerHTML = SITE.story.map((e) => `
 function ticketPhoto(m) {
   const shots = m.photos ?? (m.photo ? [{ src: m.photo, caption: `Photo from ${m.title}` }] : []);
   if (!shots.length || !unlocked()) return "";
-  return shots.map((p) => `
+  /* Two across, under the poster. Clicking one opens the full-screen viewer,
+     which picks these up on its own. */
+  return `<div class="ticket-photos">${shots.map((p) => `
     <figure class="ticket-photo">
       <img src="${p.src}" alt="${p.caption}" loading="lazy">
       <figcaption>${p.caption}</figcaption>
-    </figure>`).join("");
+    </figure>`).join("")}</div>`;
 }
 function ticketPoster(m) {
   if (!m.poster) return "";
@@ -97,16 +99,6 @@ $("her-polaroids").innerHTML = SITE.her.photos.map((p, i) => `
     <figcaption>${p.caption}</figcaption>
   </figure>`).join("");
 
-/* ---------- the engagement reel ---------- */
-$("reel-line").textContent = SITE.reel.line;
-$("reel-frame").innerHTML = `
-  <video controls preload="metadata" playsinline
-         poster="${SITE.reel.poster}" aria-label="${SITE.reel.caption}">
-    <source src="${SITE.reel.src}" type="video/mp4">
-    Your browser can't play this one — the file is ${SITE.reel.src}.
-  </video>
-  <figcaption>${SITE.reel.caption}</figcaption>`;
-
 /* ---------- what this visitor may see ----------
    The server already decided this before a single byte was served. The cookie
    below is only a hint for what to draw -- the real enforcement is in
@@ -135,28 +127,17 @@ function showFamily() {
       <p class="moment-title">${m.title}</p>
       <p class="moment-text">${m.text}</p>
     </article>`).join("");
-  $("fixing-day-line").textContent = SITE.fixingDay.line;
-  $("fixing-day-polaroids").innerHTML = polaroids(SITE.fixingDay.photos);
   $("with-family").hidden = false;
-  $("fixing-day").hidden = false;
 }
 
 function showUs() {
   $("us-polaroids").innerHTML = polaroids(US.usAlbum);
-  $("hands-line").textContent = US.hands.line;
-  $("hands-row").innerHTML = US.hands.photos.map((p) => `
-    <figure class="polaroid">
-      <img src="${p.src}" alt="Our hands, together — ${p.caption}" loading="lazy">
-      <figcaption>${p.caption}</figcaption>
-    </figure>`).join("");
   $("apology-title").textContent = US.apology.title;
   $("apology-body").innerHTML =
     US.apology.paragraphs.map((p) => `<p>${p}</p>`).join("") +
     `<p class="apology-signoff">${US.apology.signoff}</p>`;
   $("us-album").hidden = false;
-  $("hands").hidden = false;
   $("apology").hidden = false;
-  document.querySelector('.nav-links a[href="#hands"]').hidden = false;
 }
 
 /* Fetched rather than hard-linked in the page: for anyone but the two of them

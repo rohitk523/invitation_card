@@ -1,6 +1,9 @@
 /* The second door, for people without an invited Google account.
-   Deliberately weaker in what it grants: family tier only, never the just-us
-   album, the hands wall or the apology letter. */
+   Two phrases go through it. FAMILY_PASSPHRASE is the one handed around and
+   grants the family album only. US_PASSPHRASE is private to the two of them
+   and grants everything -- it exists so they are not locked out of their own
+   album while Google sign-in is unconfigured. Keep it long, and never share
+   it: it is exactly as strong as the phrase itself. */
 
 import { createHash, timingSafeEqual } from "node:crypto";
 import { TIER, cookiesFor, issue } from "../../lib/session.js";
@@ -36,7 +39,7 @@ function tooMany(ip) {
 export default async function handler(req, res) {
   if (req.method !== "POST") { res.status(405).json({ error: "method" }); return; }
 
-  const { FAMILY_PASSPHRASE, SESSION_SECRET } = process.env;
+  const { FAMILY_PASSPHRASE, US_PASSPHRASE, SESSION_SECRET } = process.env;
   if (!FAMILY_PASSPHRASE || !SESSION_SECRET) { res.status(503).json({ error: "unconfigured" }); return; }
 
   const ip = (req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
@@ -46,12 +49,16 @@ export default async function handler(req, res) {
   await new Promise((r) => setTimeout(r, 400));
 
   const given = normalise(req.body?.passphrase);
-  if (!given || !same(given, normalise(FAMILY_PASSPHRASE))) {
-    res.status(401).json({ error: "wrong" });
-    return;
-  }
+  if (!given) { res.status(401).json({ error: "wrong" }); return; }
 
-  const { token } = await issue("passphrase", TIER.FAMILY, SESSION_SECRET);
-  res.setHeader("Set-Cookie", cookiesFor(token, TIER.FAMILY));
+  /* Check the private phrase first so it wins if someone sets both the same. */
+  let tier = null;
+  if (US_PASSPHRASE && same(given, normalise(US_PASSPHRASE))) tier = TIER.US;
+  else if (same(given, normalise(FAMILY_PASSPHRASE))) tier = TIER.FAMILY;
+  if (!tier) { res.status(401).json({ error: "wrong" }); return; }
+
+  const { token } = await issue(tier === TIER.US ? "us-passphrase" : "passphrase",
+                                tier, SESSION_SECRET);
+  res.setHeader("Set-Cookie", cookiesFor(token, tier));
   res.status(200).json({ ok: true, next: safeNext(req.body?.next) });
 }

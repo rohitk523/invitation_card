@@ -16,15 +16,8 @@ const US = {
     { src: "photos/engagement/e7.jpg", caption: "Walking into the rest of it" },
     { src: "photos/engagement/e8.jpg", caption: "The twirl. The whole venue watched." },
     { src: "photos/engagement/e9.jpg", caption: "Rings on, hands touching — R & S in mehendi" },
+    { src: "photos/us/p2.jpg", caption: "Our hands — 3 July 2026" },
   ],
-  hands: {
-    line: "And in every photo, our hands found each other.",
-    photos: [
-      { src: "photos/us/p2.jpg", caption: "3 July 2026" },
-      { src: "photos/us/p4.jpg", caption: "Arm in arm" },
-      { src: "photos/engagement/e9.jpg", caption: "The rings — 13 September 2026" },
-    ],
-  },
   apology: {
     title: "An Apology to the One I Love",
     paragraphs: [
