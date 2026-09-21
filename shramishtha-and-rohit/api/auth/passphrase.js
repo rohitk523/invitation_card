@@ -1,6 +1,6 @@
 /* The second door, for people without an invited Google account.
    Deliberately weaker in what it grants: family tier only, never the just-us
-   album or the apology letter. Those need a verified Google account. */
+   album. That needs a verified Google account. */
 
 import { createHash, timingSafeEqual } from "node:crypto";
 import { TIER, cookiesFor, issue } from "../../lib/session.js";

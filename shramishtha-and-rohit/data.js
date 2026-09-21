@@ -37,6 +37,25 @@ const SITE = {
       ],
     },
     {
+      date: "2 July 2026",
+      title: "Her birthday",
+      note: "Balloons, a lunch with her family, and the first of her birthdays I got to be in the room for. Many more now scheduled.",
+      photos: [
+        { src: "photos/album/p1.jpg", alt: "The balloon evening" },
+        { src: "photos/with-family/f3.jpg", alt: "Her birthday lunch, with her family" },
+        { src: "photos/day/bday-1.jpg", alt: "Her birthday" },
+        { src: "photos/day/bday-2.jpg", alt: "Her birthday" },
+        { src: "photos/day/bday-3.jpg", alt: "Her birthday" },
+        { src: "photos/day/bday-4.jpg", alt: "Her birthday" },
+        { src: "photos/day/bday-5.jpg", alt: "Her birthday" },
+        { src: "photos/day/bday-6.jpg", alt: "Her birthday" },
+        { src: "photos/day/bday-7.jpg", alt: "Her birthday" },
+        { src: "photos/day/bday-8.jpg", alt: "Her birthday" },
+        { src: "photos/day/bday-9.jpg", alt: "Her birthday" },
+        { src: "photos/day/bday-10.jpg", alt: "Her birthday" },
+      ],
+    },
+    {
       date: "9 August 2026",
       title: "Ohh My Dog",
       note: "INOX, Prozone Mall. We skipped Spider-Man — and somewhere in that dark hall, the first movie hand-hold. Goosebumps.",
@@ -190,7 +209,6 @@ const SITE = {
     photos: [
       { src: "photos/with-family/f1.jpg", caption: "Her hand on Aai's shoulder — Aai couldn't wait to tell me" },
       { src: "photos/with-family/f2.jpg", caption: "Aai, Baba & her — one happy frame" },
-      { src: "photos/with-family/f3.jpg", caption: "Her birthday lunch, with her family" },
       { src: "photos/fixing-the-wedding/w3.jpg", caption: "Mama & Mami" },
       { src: "photos/fixing-the-wedding/w5.jpg", caption: "Mavshi & Kaka" },
       { src: "photos/fixing-the-wedding/w7.jpg", caption: "My sister, center of the frame — her preferred location" },
@@ -204,15 +222,9 @@ const SITE = {
     ],
   },
 
+  songs: [], // the list begins the day the first song is chosen,
 
-
-
-  songs: [], // the list begins the day the first song is chosen
-
-
-  // Behind the just-us door. Sincere on purpose — no jokes in this one.,
   usAlbum: [
-    { src: "photos/album/p1.jpg", caption: "The balloon evening — 3 July 2026" },
     { src: "photos/album/p3.jpg", caption: "Let coffee connect us" },
     { src: "photos/album/p6.jpg", caption: "That smile, mid-laugh" },
     { src: "photos/engagement/e1.jpg", caption: "13 September — official, with witnesses" },
@@ -224,17 +236,6 @@ const SITE = {
     { src: "photos/engagement/e7.jpg", caption: "Walking into the rest of it" },
     { src: "photos/engagement/e8.jpg", caption: "The twirl. The whole venue watched." },
     { src: "photos/engagement/e9.jpg", caption: "Rings on, hands touching — R & S in mehendi" },
-    { src: "photos/album/p2.jpg", caption: "Our hands — 3 July 2026" },
+    { src: "photos/album/p2.jpg", caption: "Our hands — her birthday, 2 July 2026" },
   ],
-  apology: {
-    title: "An Apology to the One I Love",
-    paragraphs: [
-      "I am putting this into words because I need to take profound and complete accountability. Recently, I let my own insecurities and overthinking cloud my judgment, and in doing so, I deeply hurt the person I care about most.",
-      "I jumped to conclusions and made unfair assumptions. In a moment where I should have led with trust and open communication, I reacted from a place of fear and doubt. You have always been honest, loving, and steadfast, and you did not deserve to have your character or your intentions questioned.",
-      "I know now that my reaction was a reflection of my own internal struggles, not of anything you did wrong. By projecting my insecurities onto you, I caused unnecessary pain and made you feel unvalued. For that, I am so incredibly sorry.",
-      "Love is about taking ownership when you are wrong — and I was wrong. I promise to do better. I promise to listen to you with an open heart, to trust the beautiful bond we share, and to pause and communicate my feelings before jumping to conclusions.",
-      "You mean the world to me. I deeply regret causing you pain, and I will spend every day working to be the secure, understanding, and supportive partner you truly deserve.",
-    ],
-    signoff: "— Rohit",
-  },
 };

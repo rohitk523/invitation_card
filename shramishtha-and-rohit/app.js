@@ -150,12 +150,7 @@ function showFamily() {
 
 function showUs() {
   $("us-polaroids").innerHTML = polaroids(SITE.usAlbum);
-  $("apology-title").textContent = SITE.apology.title;
-  $("apology-body").innerHTML =
-    SITE.apology.paragraphs.map((p) => `<p>${p}</p>`).join("") +
-    `<p class="apology-signoff">${SITE.apology.signoff}</p>`;
   $("us-album").hidden = false;
-  $("apology").hidden = false;
 }
 
 showFamily();
