@@ -52,6 +52,10 @@ $("timeline").innerHTML = SITE.story.map((e) => `
     <p class="tl-note">${e.note}</p>
     ${e.photos ? `<div class="tl-photos">${e.photos.map((p) =>
       `<img src="${p.src}" alt="${p.alt}" loading="lazy">`).join("")}</div>` : ""}
+    ${e.videos ? `<div class="tl-videos">${e.videos.map((v) =>
+      `<video controls preload="none" playsinline poster="${v.poster}" aria-label="${v.alt}">
+         <source src="${v.src}" type="video/mp4">
+       </video>`).join("")}</div>` : ""}
   </li>`).join("");
 
 /* ---------- movie tickets ---------- */
