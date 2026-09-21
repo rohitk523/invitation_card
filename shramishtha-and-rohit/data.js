@@ -98,13 +98,28 @@ const SITE = {
   // once Rohit sends the photos.
   outing: {
     date: "Sunday, 20 September 2026",
-    line: "One Sunday, and most of Sambhajinagar's greatest hits.",
+    line: "One Sunday: a Jyotirlinga, two rock-cut wonders, a fort, a VR headset and a crime thriller.",
     stops: [
       {
         place: "Ghrishneshwar Temple",
         badge: "1 of 12",
         note: "The twelfth Jyotirlinga, and the first one we have stood in front of together. Eleven to go — we are treating that as an itinerary rather than a statistic.",
         photos: [],
+      },
+      {
+        place: "Ellora Caves",
+        note: "Carved straight down into the rock by people with considerably more patience than the two of us have between us. She posed in every doorway. No complaints filed.",
+        photos: [
+          { src: "photos/outings/ellora-her-1.jpg", caption: "In the doorway, mid-sentence." },
+          { src: "photos/outings/ellora-her-2.jpg", caption: "Framed by something older than both families." },
+        ],
+      },
+      {
+        place: "Daulatabad Fort",
+        note: "As far as the Chand Minar, where she located the only bench with a view and declared the climbing portion of the day complete.",
+        photos: [
+          { src: "photos/outings/daulatabad-her.jpg", caption: "Shoes off, minar behind, entirely unbothered." },
+        ],
       },
       {
         place: "Prozone Mall",
@@ -130,6 +145,11 @@ const SITE = {
     photos: [
       { src: "photos/her/h1.jpg", caption: "The pink saree. The smile did the rest." },
       { src: "photos/her/h2.jpg", caption: "Twirl radius: the entire venue." },
+      { src: "photos/outings/ellora-her-2.jpg", caption: "A thousand years of carving behind her. I looked at the yellow kurta." },
+      { src: "photos/outings/ellora-her-1.jpg", caption: "Ellora framed her better than I ever manage to." },
+      { src: "photos/outings/daulatabad-her.jpg", caption: "Found the one bench with a view and retired there." },
+      { src: "photos/outings/prozone-vr.jpg", caption: "Gone somewhere better. Left me holding the scrunchie." },
+      { src: "photos/movies/daayra-her.jpg", caption: "Forty percent of a thriller, one hundred percent of a dupatta." },
     ],
   },
 
