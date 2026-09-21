@@ -162,8 +162,14 @@ const SITE = {
     photos: [
       { src: "photos/her/h1.jpg", caption: "The pink saree. The smile did the rest." },
       { src: "photos/her/h2.jpg", caption: "Twirl radius: the entire venue." },
-      { src: "photos/outings/ellora-her-2.jpg", caption: "A thousand years of carving behind her. I looked at the yellow kurta." },
-      { src: "photos/outings/ellora-her-1.jpg", caption: "Framed better by that doorway than by anything I own." },
+      { src: "photos/her/h3.jpg", caption: "Eight photographs in twenty-two seconds. I have since been asked to show restraint." },
+      { src: "photos/her/h4.jpg", caption: "Second of eight. Restraint not yet located." },
+      { src: "photos/her/h5.jpg", caption: "Third. She had stopped counting by this point." },
+      { src: "photos/her/h6.jpg", caption: "Fourth, and still nobody had asked me to stop." },
+      { src: "photos/her/h7.jpg", caption: "A seven-second interval, purely for artistic reasons." },
+      { src: "photos/her/h8.jpg", caption: "Framed better by that doorway than by anything I own." },
+      { src: "photos/her/h9.jpg", caption: "Seventh. In my defence, she was standing right there." },
+      { src: "photos/her/h10.jpg", caption: "The last one, ten seconds after all the others." },
     ],
   },
 
