@@ -23,7 +23,7 @@ function tick() {
   const target = currentTarget(now);
   if (!target) {
     const days = Math.floor((now - WEDDING) / 86400000);
-    $("hero-eyebrow").textContent = "happily ever after";
+    $("cd-eyebrow").textContent = "happily ever after";
     $("count-label").textContent = "Married";
     $("count-date").textContent = `${days} day${days === 1 ? "" : "s"} of forever, and counting`;
     $("countdown").hidden = true;
@@ -42,6 +42,9 @@ function tick() {
   $("count-date").textContent = target.date;
   setTimeout(tick, 1000 - (Date.now() % 1000));
 }
+
+$("hero-when").textContent =
+  new Date() < ENGAGEMENT ? SITE.engagementLine : SITE.weddingLine;
 tick();
 
 /* ---------- story timeline ----------

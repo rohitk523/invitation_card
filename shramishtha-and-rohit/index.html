@@ -22,30 +22,19 @@
     <a href="#us-album">Us</a>
     <a href="#with-family">Family</a>
     <a href="#songs">Songs</a>
+    <a href="#countdown-section">Countdown</a>
     <a href="/api/auth/logout" class="nav-out">Sign out</a>
   </div>
 </nav>
 
-<!-- ============ HERO / COUNTDOWN ============ -->
+<!-- ============ HERO ============ -->
 <header class="hero" id="top">
   <div class="petals" aria-hidden="true">
     <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
   </div>
-  <p class="hero-eyebrow" id="hero-eyebrow">the countdown to forever</p>
+  <p class="hero-eyebrow">save the date</p>
   <h1 class="hero-names">Shramishtha <span class="amp">&amp;</span> Rohit</h1>
-  <p class="hero-sub" id="count-label">Until our Saakharpuda</p>
-
-  <div class="countdown" id="countdown" role="timer" aria-live="off">
-    <div class="unit"><span class="num" id="cd-d">–</span><span class="lbl">days</span></div>
-    <div class="colon">:</div>
-    <div class="unit"><span class="num" id="cd-h">–</span><span class="lbl">hours</span></div>
-    <div class="colon">:</div>
-    <div class="unit"><span class="num" id="cd-m">–</span><span class="lbl">minutes</span></div>
-    <div class="colon">:</div>
-    <div class="unit"><span class="num" id="cd-s">–</span><span class="lbl">seconds</span></div>
-  </div>
-
-  <p class="hero-date" id="count-date"></p>
+  <p class="hero-sub" id="hero-when">Friday, 29 January 2027</p>
   <a class="scroll-hint" href="#story" aria-label="Scroll to our story">⌄</a>
 </header>
 
@@ -102,6 +91,24 @@
     <h2 class="sec-title">Letters We&rsquo;ll Open Someday</h2>
     <p class="sec-note">Written now, sealed tight, waiting for a day worth opening them on.</p>
     <div class="letters" id="letters-list"></div>
+  </section>
+
+  <!-- ============ COUNTDOWN ============ -->
+  <section class="section section-alt countdown-section" id="countdown-section">
+    <p class="sec-eyebrow" id="cd-eyebrow">the countdown to forever</p>
+    <h2 class="sec-title" id="count-label">Until our Saakharpuda</h2>
+
+    <div class="countdown" id="countdown" role="timer" aria-live="off">
+      <div class="unit"><span class="num" id="cd-d">–</span><span class="lbl">days</span></div>
+      <div class="colon">:</div>
+      <div class="unit"><span class="num" id="cd-h">–</span><span class="lbl">hours</span></div>
+      <div class="colon">:</div>
+      <div class="unit"><span class="num" id="cd-m">–</span><span class="lbl">minutes</span></div>
+      <div class="colon">:</div>
+      <div class="unit"><span class="num" id="cd-s">–</span><span class="lbl">seconds</span></div>
+    </div>
+
+    <p class="count-date" id="count-date"></p>
   </section>
 </main>
 
