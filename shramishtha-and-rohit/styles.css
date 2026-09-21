@@ -511,3 +511,16 @@ body.lb-open { overflow: hidden; }
   box-shadow: 0 6px 16px rgba(70, 50, 58, .14);
 }
 @media print { .tl-videos { display: none; } }
+
+/* ---------- a day with several stops ---------- */
+.tl-stops { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 18px; }
+.tl-stops > li {
+  background: #fff; border: 1px solid #EFE6D8; border-radius: 12px;
+  padding: 16px 18px; box-shadow: 0 8px 20px rgba(124, 46, 72, .05);
+}
+.tl-stops > li::before { content: none; }
+.stop-time { font-size: 10.5px; letter-spacing: .2em; text-transform: uppercase; color: #B08D57; margin: 0; }
+.stop-title { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 20px; margin: 2px 0 4px; color: #46323A; }
+.stop-note { font-family: "Caveat", cursive; font-size: 18px; color: #6E5560; margin: 0; line-height: 1.45; }
+.tl-stops .tl-photos { max-width: none; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+.tl-stops .tl-videos { max-width: 320px; }

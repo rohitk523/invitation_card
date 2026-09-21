@@ -19,11 +19,22 @@ const SITE = {
       date: "21 June 2026",
       title: "The families said yes",
       note: "Chhatrapati Sambhajinagar — both homes, elders and cousins in one room. By evening, the wedding was fixed.",
+      photos: [
+        { src: "photos/day/fixed-1.jpg", alt: "21 June 2026" },
+        { src: "photos/fixing-the-wedding/w1.jpg", alt: "The new family" },
+        { src: "photos/fixing-the-wedding/w2.jpg", alt: "Her younger brother" },
+        { src: "photos/fixing-the-wedding/w4.jpg", alt: "With the mamas" },
+        { src: "photos/fixing-the-wedding/w6.jpg", alt: "The mothers and the aunts" },
+        { src: "photos/with-family/f4.jpg", alt: "The cousins" },
+      ],
     },
     {
       date: "28 June 2026",
       title: "The venue hunt begins",
       note: "A trip to Fort View Adventure Resort, scouting where forever might start.",
+      photos: [
+        { src: "photos/album/p9.jpg", alt: "Fort View Adventure Resort" },
+      ],
     },
     {
       date: "9 August 2026",
@@ -34,6 +45,11 @@ const SITE = {
       date: "30 August 2026",
       title: "The apology roses",
       note: "We hit a rough patch — sharp words, messages I wish I could unsend. The roses were how I said the truest thing: I'm sorry, and I choose us. She forgave me — once the roses cleared quality inspection. I'm told the matter can still be reopened as evidence in any future argument.",
+      photos: [
+        { src: "photos/album/p5.jpg", alt: "The apology roses" },
+        { src: "photos/day/roses-1.jpg", alt: "The apology roses" },
+        { src: "photos/day/roses-2.jpg", alt: "The apology roses" },
+      ],
     },
     {
       date: "13 September 2026",
@@ -55,37 +71,37 @@ const SITE = {
       date: "20 September 2026",
       title: "The First Weekend After the Engagement",
       note: "One week married-to-be, and we spent the Sunday proving we could still out-walk each other. A Jyotirlinga, two rock-cut wonders, a fort, a headset and a crime thriller.",
-    },
-    {
-      date: "20 September 2026 · 1:55 pm",
-      title: "Ghrishneshwar Temple",
-      note: "The twelfth Jyotirlinga, and the first one we have stood in front of together. Eleven to go — we are treating that as an itinerary rather than a statistic.",
-      photos: [
+      stops: [
+        {
+          time: "1:55 pm",
+          title: "Ghrishneshwar Temple",
+          note: "The twelfth Jyotirlinga, and the first one we have stood in front of together. Eleven to go — we are treating that as an itinerary rather than a statistic.",
+          photos: [
         { src: "photos/day/ghrishneshwar-1.jpg", alt: "Ghrishneshwar Temple" },
         { src: "photos/day/ghrishneshwar-2.jpg", alt: "Ghrishneshwar Temple" },
-      ],
-    },
-    {
-      date: "20 September 2026 · 2:40 pm",
-      title: "Ellora Caves",
-      note: "Carved straight down into the rock by people with considerably more patience than the two of us have between us.",
-      photos: [
+          ],
+        },
+        {
+          time: "2:40 pm",
+          title: "Ellora Caves",
+          note: "Carved straight down into the rock by people with considerably more patience than the two of us have between us.",
+          photos: [
         { src: "photos/day/ellora-1.jpg", alt: "Ellora Caves" },
         { src: "photos/day/ellora-2.jpg", alt: "Ellora Caves" },
         { src: "photos/day/ellora-3.jpg", alt: "Ellora Caves" },
         { src: "photos/day/ellora-4.jpg", alt: "Ellora Caves" },
         { src: "photos/day/ellora-5.jpg", alt: "Ellora Caves" },
         { src: "photos/day/ellora-6.jpg", alt: "Ellora Caves" },
-      ],
-      videos: [
+          ],
+          videos: [
         { src: "media/day-ellora.mp4", poster: "media/day-ellora-poster.jpg", alt: "Ellora Caves" },
-      ],
-    },
-    {
-      date: "20 September 2026 · 3:57 pm",
-      title: "Daulatabad Fort",
-      note: "As far as the Chand Minar, where the climbing portion of the day was quietly declared complete.",
-      photos: [
+          ],
+        },
+        {
+          time: "3:57 pm",
+          title: "Daulatabad Fort",
+          note: "As far as the Chand Minar, where the climbing portion of the day was quietly declared complete.",
+          photos: [
         { src: "photos/day/daulatabad-1.jpg", alt: "Daulatabad Fort" },
         { src: "photos/day/daulatabad-2.jpg", alt: "Daulatabad Fort" },
         { src: "photos/day/daulatabad-3.jpg", alt: "Daulatabad Fort" },
@@ -97,18 +113,20 @@ const SITE = {
         { src: "photos/day/daulatabad-9.jpg", alt: "Daulatabad Fort" },
         { src: "photos/day/daulatabad-10.jpg", alt: "Daulatabad Fort" },
         { src: "photos/day/daulatabad-11.jpg", alt: "Daulatabad Fort" },
-      ],
-    },
-    {
-      date: "20 September 2026 · evening",
-      title: "Prozone Mall",
-      note: "A headset that took her somewhere I could not follow, and then Daayra at INOX — watched from under a shawl, because the air conditioning was set to arctic.",
-      photos: [
+          ],
+        },
+        {
+          time: "evening",
+          title: "Prozone Mall",
+          note: "A headset that took her somewhere I could not follow, and then Daayra at INOX — watched from under a shawl, because the air conditioning was set to arctic.",
+          photos: [
         { src: "photos/day/prozone-1.jpg", alt: "Prozone Mall" },
         { src: "photos/day/prozone-2.jpg", alt: "Prozone Mall" },
-      ],
-      videos: [
+          ],
+          videos: [
         { src: "media/day-prozone.mp4", poster: "media/day-prozone-poster.jpg", alt: "Prozone Mall" },
+          ],
+        },
       ],
     },
     {
@@ -173,14 +191,9 @@ const SITE = {
       { src: "photos/with-family/f1.jpg", caption: "Her hand on Aai's shoulder — Aai couldn't wait to tell me" },
       { src: "photos/with-family/f2.jpg", caption: "Aai, Baba & her — one happy frame" },
       { src: "photos/with-family/f3.jpg", caption: "Her birthday lunch, with her family" },
-      { src: "photos/fixing-the-wedding/w1.jpg", caption: "The new family — mine now too" },
-      { src: "photos/fixing-the-wedding/w2.jpg", caption: "Her younger brother — the approval committee of one" },
       { src: "photos/fixing-the-wedding/w3.jpg", caption: "Mama & Mami" },
-      { src: "photos/fixing-the-wedding/w4.jpg", caption: "With the mamas" },
       { src: "photos/fixing-the-wedding/w5.jpg", caption: "Mavshi & Kaka" },
-      { src: "photos/fixing-the-wedding/w6.jpg", caption: "The mothers and the aunts" },
       { src: "photos/fixing-the-wedding/w7.jpg", caption: "My sister, center of the frame — her preferred location" },
-      { src: "photos/with-family/f4.jpg", caption: "The cousins' squad" },
       { src: "photos/with-family/f5.jpg", caption: "Her mother, the mamas & mavshi" },
     ],
     moments: [
@@ -201,9 +214,7 @@ const SITE = {
   usAlbum: [
     { src: "photos/album/p1.jpg", caption: "The balloon evening — 3 July 2026" },
     { src: "photos/album/p3.jpg", caption: "Let coffee connect us" },
-    { src: "photos/album/p5.jpg", caption: "The apology roses — 30 August 2026" },
     { src: "photos/album/p6.jpg", caption: "That smile, mid-laugh" },
-    { src: "photos/album/p9.jpg", caption: "Fort View Adventure Resort — hunting for where forever begins" },
     { src: "photos/engagement/e1.jpg", caption: "13 September — official, with witnesses" },
     { src: "photos/engagement/e2.jpg", caption: "The saree, and the lucky guy next to it" },
     { src: "photos/engagement/e4.jpg", caption: "Mid-conversation, mid-forever" },

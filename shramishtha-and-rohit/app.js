@@ -44,18 +44,41 @@ function tick() {
 }
 tick();
 
-/* ---------- story timeline ---------- */
+/* ---------- story timeline ----------
+   An entry may carry its own photos, or a list of stops when several things
+   happened on one day -- the Sunday after the engagement being four. */
+
+const tlPhotos = (list) => list?.length
+  ? `<div class="tl-photos">${list.map((p) =>
+      `<img src="${p.src}" alt="${p.alt}" loading="lazy">`).join("")}</div>`
+  : "";
+
+const tlVideos = (list) => list?.length
+  ? `<div class="tl-videos">${list.map((v) =>
+      `<video controls preload="none" playsinline poster="${v.poster}" aria-label="${v.alt}">
+         <source src="${v.src}" type="video/mp4">
+       </video>`).join("")}</div>`
+  : "";
+
+const tlStops = (stops) => stops?.length
+  ? `<ol class="tl-stops">${stops.map((st) => `
+      <li>
+        <p class="stop-time">${st.time}</p>
+        <h4 class="stop-title">${st.title}</h4>
+        <p class="stop-note">${st.note}</p>
+        ${tlPhotos(st.photos)}
+        ${tlVideos(st.videos)}
+      </li>`).join("")}</ol>`
+  : "";
+
 $("timeline").innerHTML = SITE.story.map((e) => `
-  <li>
+  <li${e.stops ? ' class="has-stops"' : ""}>
     <p class="tl-date">${e.date}</p>
     <h3 class="tl-title">${e.title}</h3>
     <p class="tl-note">${e.note}</p>
-    ${e.photos ? `<div class="tl-photos">${e.photos.map((p) =>
-      `<img src="${p.src}" alt="${p.alt}" loading="lazy">`).join("")}</div>` : ""}
-    ${e.videos ? `<div class="tl-videos">${e.videos.map((v) =>
-      `<video controls preload="none" playsinline poster="${v.poster}" aria-label="${v.alt}">
-         <source src="${v.src}" type="video/mp4">
-       </video>`).join("")}</div>` : ""}
+    ${tlPhotos(e.photos)}
+    ${tlVideos(e.videos)}
+    ${tlStops(e.stops)}
   </li>`).join("");
 
 /* ---------- movie tickets ---------- */
