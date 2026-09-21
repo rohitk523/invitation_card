@@ -509,20 +509,6 @@ body.lb-open { overflow: hidden; }
 .letter-body p { margin: 0 0 10px; }
 .letters-note { font-family: "Caveat", cursive; font-size: 19px; color: #8A6B74; text-align: center; }
 
-/* ---------- a day out ---------- */
-.stops { display: grid; gap: 26px; margin-top: 40px; max-width: 760px; margin-inline: auto; }
-.stop {
-  background: #fff; border: 1px solid #EADFCE; border-radius: 14px;
-  padding: 22px 24px; box-shadow: 0 10px 26px rgba(124, 46, 72, .06);
-}
-.stop-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-.stop-place { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 23px; margin: 0; color: #46323A; }
-.stop-badge {
-  font-size: 10.5px; letter-spacing: .2em; text-transform: uppercase;
-  color: #B08D57; border: 1px solid #EADFCE; border-radius: 999px; padding: 3px 11px;
-}
-.stop-note { font-family: "Caveat", cursive; font-size: 19px; color: #6E5560; margin: 10px 0 0; line-height: 1.45; }
-.stop-photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 18px; margin-top: 18px; }
-.stop-photos .polaroid { box-shadow: 0 10px 24px rgba(70, 50, 58, .12); }
+
 .ticket-photo figcaption { font-family: "Caveat", cursive; font-size: 17px; color: #8A6B74; text-align: center; padding-top: 6px; }
 .ticket-photo + .ticket-photo { margin-top: 10px; }

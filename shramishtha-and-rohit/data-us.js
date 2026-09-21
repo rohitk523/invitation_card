@@ -2,6 +2,10 @@
 // allow-listed Google account, so nothing in here reaches a passphrase guest.
 const US = {
   usAlbum: [
+    { src: "photos/day/ghrishneshwar-1.jpg", caption: "20 September — early, before the walking began" },
+    { src: "photos/day/ellora-2.jpg", caption: "The middle of a very long Sunday" },
+    { src: "photos/day/ellora-3.jpg", caption: "Nine minutes later, still going" },
+    { src: "photos/day/daulatabad-2.jpg", caption: "Late afternoon, and somehow still upright" },
     { src: "photos/us/p1.jpg", caption: "The balloon evening — 3 July 2026" },
     { src: "photos/us/p3.jpg", caption: "Let coffee connect us" },
     { src: "photos/us/p5.jpg", caption: "The apology roses — 30 August 2026" },

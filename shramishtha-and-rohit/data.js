@@ -51,8 +51,33 @@ const SITE = {
     },
     {
       date: "20 September 2026",
-      title: "The Sunday we did everything",
-      note: "Ghrishneshwar, Ellora, Daulatabad, a VR headset and a crime thriller — in one day, on one tank of patience.",
+      title: "Ghrishneshwar Temple",
+      note: "The twelfth Jyotirlinga, and the first one we have stood in front of together. Eleven to go — we are treating that as an itinerary rather than a statistic.",
+      photos: [
+        { src: "photos/day/ghrishneshwar-1.jpg", alt: "Ghrishneshwar Temple" },
+        { src: "photos/day/ghrishneshwar-2.jpg", alt: "Ghrishneshwar Temple" },
+        { src: "photos/day/ghrishneshwar-3.jpg", alt: "Ghrishneshwar Temple" },
+      ],
+    },
+    {
+      date: "20 September 2026",
+      title: "Ellora Caves",
+      note: "Carved straight down into the rock by people with considerably more patience than the two of us have between us.",
+      photos: [
+        { src: "photos/day/ellora-1.jpg", alt: "Ellora Caves" },
+        { src: "photos/day/ellora-2.jpg", alt: "Ellora Caves" },
+        { src: "photos/day/ellora-3.jpg", alt: "Ellora Caves" },
+        { src: "photos/day/ellora-4.jpg", alt: "Ellora Caves" },
+      ],
+    },
+    {
+      date: "20 September 2026",
+      title: "Daulatabad Fort",
+      note: "As far as the Chand Minar, where the climbing portion of the day was quietly declared complete. The evening went to a VR headset and a crime thriller.",
+      photos: [
+        { src: "photos/day/daulatabad-1.jpg", alt: "Daulatabad Fort" },
+        { src: "photos/day/daulatabad-2.jpg", alt: "Daulatabad Fort" },
+      ],
     },
     {
       date: "29 January 2027",
@@ -93,44 +118,6 @@ const SITE = {
     },
   ],
 
-  // Sunday 20 September 2026 — one day, several stops.
-  // Ellora caves and Daulatabad fort still to come; add them as stops below
-  // once Rohit sends the photos.
-  outing: {
-    date: "Sunday, 20 September 2026",
-    line: "One Sunday: a Jyotirlinga, two rock-cut wonders, a fort, a VR headset and a crime thriller.",
-    stops: [
-      {
-        place: "Ghrishneshwar Temple",
-        badge: "1 of 12",
-        note: "The twelfth Jyotirlinga, and the first one we have stood in front of together. Eleven to go — we are treating that as an itinerary rather than a statistic.",
-        photos: [],
-      },
-      {
-        place: "Ellora Caves",
-        note: "Carved straight down into the rock by people with considerably more patience than the two of us have between us. She posed in every doorway. No complaints filed.",
-        photos: [
-          { src: "photos/outings/ellora-her-1.jpg", caption: "In the doorway, mid-sentence." },
-          { src: "photos/outings/ellora-her-2.jpg", caption: "Framed by something older than both families." },
-        ],
-      },
-      {
-        place: "Daulatabad Fort",
-        note: "As far as the Chand Minar, where she located the only bench with a view and declared the climbing portion of the day complete.",
-        photos: [
-          { src: "photos/outings/daulatabad-her.jpg", caption: "Shoes off, minar behind, entirely unbothered." },
-        ],
-      },
-      {
-        place: "Prozone Mall",
-        note: "Virtual reality first, where she was handed a headset and immediately went somewhere I could not follow. Then Daayra at INOX, two floors down.",
-        photos: [
-          { src: "photos/outings/prozone-vr.jpg", caption: "Somewhere else entirely." },
-        ],
-      },
-    ],
-  },
-
   // The engagement film. Sits behind the same door as everything else.
   reel: {
     line: "Thirty-eight seconds of 13 September, with the song she picked.",
@@ -146,7 +133,7 @@ const SITE = {
       { src: "photos/her/h1.jpg", caption: "The pink saree. The smile did the rest." },
       { src: "photos/her/h2.jpg", caption: "Twirl radius: the entire venue." },
       { src: "photos/outings/ellora-her-2.jpg", caption: "A thousand years of carving behind her. I looked at the yellow kurta." },
-      { src: "photos/outings/ellora-her-1.jpg", caption: "Ellora framed her better than I ever manage to." },
+      { src: "photos/outings/ellora-her-1.jpg", caption: "Framed better by that doorway than by anything I own." },
       { src: "photos/outings/daulatabad-her.jpg", caption: "Found the one bench with a view and retired there." },
       { src: "photos/outings/prozone-vr.jpg", caption: "Gone somewhere better. Left me holding the scrunchie." },
       { src: "photos/movies/daayra-her.jpg", caption: "Forty percent of a thriller, one hundred percent of a dupatta." },
