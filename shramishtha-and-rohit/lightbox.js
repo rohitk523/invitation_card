@@ -45,9 +45,12 @@ let lastFocus = null; // so Esc returns you where you were
 /* A photo inside a [hidden] section is behind a gate — leave it out. */
 const visible = (img) => !img.closest("[hidden]");
 
+/* A figure with no figcaption is deliberately uncaptioned -- the viewer stays
+   quiet for it. A bare photo, like the ones in the timeline, has only its alt. */
 function captionOf(img) {
-  const own = img.closest("figure")?.querySelector("figcaption")?.textContent.trim();
-  return own || img.alt || "";
+  const fig = img.closest("figure");
+  if (fig) return fig.querySelector("figcaption")?.textContent.trim() || "";
+  return img.alt || "";
 }
 
 function gather() {

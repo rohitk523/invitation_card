@@ -121,8 +121,7 @@ renderTickets();
 $("her-line").textContent = SITE.her.line;
 $("her-polaroids").innerHTML = SITE.her.photos.map((p, i) => `
   <figure class="polaroid" style="--tilt:${i % 2 ? 2 : -2}deg">
-    <img src="${p.src}" alt="${p.caption}" loading="lazy">
-    <figcaption>${p.caption}</figcaption>
+    <img src="${p.src}" alt="${p.alt}" loading="lazy">
   </figure>`).join("");
 
 /* ---------- rendering ----------
@@ -135,8 +134,7 @@ function polaroids(list) {
   const tilts = [-2.4, 1.8, -1.2, 2.6, -2, 1.4, -1.8, 2.2];
   return list.map((p, i) => `
     <figure class="polaroid" style="--tilt:${tilts[i % tilts.length]}deg">
-      <img src="${p.src}" alt="${p.caption}" loading="lazy">
-      <figcaption>${p.caption}</figcaption>
+      <img src="${p.src}" alt="${p.alt}" loading="lazy">
     </figure>`).join("");
 }
 
