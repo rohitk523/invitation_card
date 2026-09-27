@@ -149,6 +149,14 @@ const SITE = {
       ],
     },
     {
+      date: "27 September 2026",
+      title: "Sunday at Mhaismal",
+      note: "Mhaismal is called a hill station. It did not feel like one — the heat was overwhelming all the way up. A Devi temple first, where we took no photographs, and then a lake nearby.",
+      photos: [
+        { src: "photos/day/mhaismal-1.jpg", alt: "The lake near Mhaismal" },
+      ],
+    },
+    {
       date: "29 January 2027",
       title: "The wedding",
       note: "The day every countdown on this page is running toward.",
@@ -184,6 +192,13 @@ const SITE = {
         { src: "photos/movies/daayra-her.jpg", caption: "Row D, mid-film, fully fortified." },
         { src: "photos/movies/daayra-ticket.jpg", caption: "Two seats, as always." },
       ],
+    },
+    {
+      title: "Vvan",
+      date: "27 September 2026",
+      note: "The last stop of the Mhaismal Sunday, after the temple and the lake.",
+      poster: "photos/poster-vvan.jpg",
+      photos: [],
     },
   ],
 
@@ -237,5 +252,7 @@ const SITE = {
     { src: "photos/engagement/e8.jpg", alt: "The twirl" },
     { src: "photos/engagement/e9.jpg", alt: "Rings on, R & S in mehendi" },
     { src: "photos/album/p2.jpg", alt: "Our hands, her birthday, 2 July 2026" },
+    { src: "photos/album/lake-1.jpg", alt: "The two of us by the lake near Mhaismal" },
+    { src: "photos/album/lake-2.jpg", alt: "By the lake near Mhaismal" },
   ],
 };
