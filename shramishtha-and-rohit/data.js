@@ -153,6 +153,7 @@ const SITE = {
       title: "Sunday at Mhaismal",
       note: "Mhaismal is called a hill station. It did not feel like one — the heat was overwhelming all the way up. A Devi temple first, where we took no photographs, and then a lake nearby.",
       photos: [
+        { src: "photos/day/mhaismal-2.jpg", alt: "The lake near Mhaismal" },
         { src: "photos/day/mhaismal-1.jpg", alt: "The lake near Mhaismal" },
       ],
     },
@@ -216,6 +217,15 @@ const SITE = {
       { src: "photos/her/h8.jpg", alt: "Shramishtha in the doorway" },
       { src: "photos/her/h9.jpg", alt: "Shramishtha" },
       { src: "photos/her/h10.jpg", alt: "Shramishtha" },
+      { src: "photos/her/h11.jpg", alt: "Shramishtha at the lake near Mhaismal" },
+      { src: "photos/her/h12.jpg", alt: "Shramishtha at the lake near Mhaismal" },
+      { src: "photos/her/h13.jpg", alt: "Shramishtha at the lake near Mhaismal" },
+      { src: "photos/her/h14.jpg", alt: "Shramishtha at the lake near Mhaismal" },
+      { src: "photos/her/h15.jpg", alt: "Shramishtha at the lake near Mhaismal" },
+      { src: "photos/her/h16.jpg", alt: "Shramishtha at the lake near Mhaismal" },
+      { src: "photos/her/h17.jpg", alt: "Shramishtha at the lake near Mhaismal" },
+      { src: "photos/her/h18.jpg", alt: "Shramishtha at the lake near Mhaismal" },
+      { src: "photos/her/h19.jpg", alt: "Shramishtha at the lake near Mhaismal" },
     ],
   },
 
@@ -254,5 +264,8 @@ const SITE = {
     { src: "photos/album/p2.jpg", alt: "Our hands, her birthday, 2 July 2026" },
     { src: "photos/album/lake-1.jpg", alt: "The two of us by the lake near Mhaismal" },
     { src: "photos/album/lake-2.jpg", alt: "By the lake near Mhaismal" },
+    { src: "photos/album/lake-3.jpg", alt: "The two of us at the lake near Mhaismal" },
+    { src: "photos/album/lake-4.jpg", alt: "The two of us at the lake near Mhaismal" },
+    { src: "photos/album/lake-5.jpg", alt: "The two of us at the lake near Mhaismal" },
   ],
 };
