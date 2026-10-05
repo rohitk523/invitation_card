@@ -158,6 +158,21 @@ const SITE = {
       ],
     },
     {
+      date: "3 October 2026",
+      title: "Where she would sit",
+      note: "A little fight at dinner, about whether she would sit across from me or beside me. She said beside. I teased her about it until she was annoyed enough to say that now she would sit in front — and then at the table she went shy, refused, and sat beside me anyway. Kailash, near Connaught Place. Afterwards we carried dessert home for the whole family, and at the dessert place I tried once more: not yet, she said, and put her arm through mine instead. She is a precious little thing and I fall a little further every time.",
+    },
+    {
+      date: "4 October 2026",
+      title: "Siddharth Garden, and Bibi Ka Maqbara",
+      note: "The Buddha standing behind us in the photographs, and the animals further into the garden. The lion was the one that got her — she went quiet, moved behind my arm and squeezed it, and I have thought about that more than once since. Bibi Ka Maqbara the same day. She stayed close to me the whole time, and I had butterflies every time she did. I keep falling further into her, and it looks like she is falling too.",
+      photos: [
+        { src: "photos/album/garden-1.jpg", alt: "Siddharth Garden" },
+        { src: "photos/album/maqbara-1.jpg", alt: "Bibi Ka Maqbara" },
+        { src: "photos/her/h20.jpg", alt: "Bibi Ka Maqbara" },
+      ],
+    },
+    {
       date: "29 January 2027",
       title: "The wedding",
       note: "The day every countdown on this page is running toward.",
@@ -201,6 +216,13 @@ const SITE = {
       poster: "photos/poster-vvan.jpg",
       photos: [],
     },
+    {
+      title: "Drishyam 3",
+      date: "4 October 2026",
+      note: "Amazing. The direction, the pace, the reveal, the suspense — all of it. Ajay Devgn looked like he had just been woken from a nap, but at least this time there were expressions on his face. We had a blast.",
+      poster: "photos/poster-drishyam3.jpg",
+      photos: [],
+    },
   ],
 
   // Her own gallery — add photos to photos/her/ and list them here.
@@ -226,6 +248,9 @@ const SITE = {
       { src: "photos/her/h17.jpg", alt: "Shramishtha at the lake near Mhaismal" },
       { src: "photos/her/h18.jpg", alt: "Shramishtha at the lake near Mhaismal" },
       { src: "photos/her/h19.jpg", alt: "Shramishtha at the lake near Mhaismal" },
+      { src: "photos/her/h20.jpg", alt: "Shramishtha at Bibi Ka Maqbara" },
+      { src: "photos/her/h21.jpg", alt: "Shramishtha at Bibi Ka Maqbara" },
+      { src: "photos/her/h22.jpg", alt: "Shramishtha at Bibi Ka Maqbara" },
     ],
   },
 
@@ -267,5 +292,8 @@ const SITE = {
     { src: "photos/album/lake-3.jpg", alt: "The two of us at the lake near Mhaismal" },
     { src: "photos/album/lake-4.jpg", alt: "The two of us at the lake near Mhaismal" },
     { src: "photos/album/lake-5.jpg", alt: "The two of us at the lake near Mhaismal" },
+    { src: "photos/album/garden-1.jpg", alt: "The two of us at Siddharth Garden, the Buddha behind us" },
+    { src: "photos/album/maqbara-1.jpg", alt: "The two of us at Bibi Ka Maqbara" },
+    { src: "photos/album/maqbara-2.jpg", alt: "The two of us at Bibi Ka Maqbara" },
   ],
 };
