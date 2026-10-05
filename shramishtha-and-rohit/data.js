@@ -161,15 +161,42 @@ const SITE = {
       date: "3 October 2026",
       title: "Where she would sit",
       note: "A little fight at dinner, about whether she would sit across from me or beside me. She said beside. I teased her about it until she was annoyed enough to say that now she would sit in front — and then at the table she went shy, refused, and sat beside me anyway. Kailash, near Connaught Place. Afterwards we carried dessert home for the whole family, and at the dessert place I tried once more: not yet, she said, and put her arm through mine instead. She is a precious little thing and I fall a little further every time.",
+      photos: [
+        { src: "photos/her/h23.jpg", alt: "Shramishtha at Kailash" },
+      ],
     },
     {
       date: "4 October 2026",
       title: "Siddharth Garden, and Bibi Ka Maqbara",
-      note: "The Buddha standing behind us in the photographs, and the animals further into the garden. The lion was the one that got her — she went quiet, moved behind my arm and squeezed it, and I have thought about that more than once since. Bibi Ka Maqbara the same day. She stayed close to me the whole time, and I had butterflies every time she did. I keep falling further into her, and it looks like she is falling too.",
-      photos: [
-        { src: "photos/album/garden-1.jpg", alt: "Siddharth Garden" },
-        { src: "photos/album/maqbara-1.jpg", alt: "Bibi Ka Maqbara" },
-        { src: "photos/her/h20.jpg", alt: "Bibi Ka Maqbara" },
+      note: "The lion was the one that got her — she went quiet, moved behind my arm and squeezed it, and I have thought about that more than once since. She stayed close to me the whole time, and I had butterflies every time she did. I keep falling further into her, and it looks like she is falling too.",
+      stops: [
+        {
+          time: "Siddharth Garden",
+          title: "The Buddha, and then the animals",
+          note: "The statue at the top of the path, and the zoo behind the garden.",
+          photos: [
+        { src: "photos/album/garden-1.jpg", alt: "The two of us at Siddharth Garden, the Buddha behind us" },
+        { src: "photos/day/zoo-lion.jpg", alt: "A lion at Siddharth Garden" },
+        { src: "photos/day/zoo-tiger.jpg", alt: "A tiger asleep at Siddharth Garden" },
+        { src: "photos/day/zoo-sambar.jpg", alt: "A sambar stag at Siddharth Garden" },
+        { src: "photos/day/zoo-deer.jpg", alt: "Deer resting at Siddharth Garden" },
+        { src: "photos/day/zoo-jackals.jpg", alt: "Jackals at Siddharth Garden" },
+        { src: "photos/day/zoo-porcupine.jpg", alt: "A porcupine at Siddharth Garden" },
+        { src: "photos/day/zoo-emu.jpg", alt: "An emu at Siddharth Garden" },
+        { src: "photos/day/zoo-python-1.jpg", alt: "A python coiled inside a pipe at Siddharth Garden" },
+        { src: "photos/day/zoo-python-2.jpg", alt: "A python at Siddharth Garden" },
+        { src: "photos/day/zoo-gar.jpg", alt: "A long-snouted fish in the aquarium at Siddharth Garden" },
+          ],
+        },
+        {
+          time: "Bibi Ka Maqbara",
+          title: "The long walk up",
+          note: "Up the causeway, and the bench partway along.",
+          photos: [
+        { src: "photos/album/maqbara-1.jpg", alt: "The two of us at Bibi Ka Maqbara" },
+        { src: "photos/her/h20.jpg", alt: "Shramishtha at Bibi Ka Maqbara" },
+          ],
+        },
       ],
     },
     {
@@ -251,6 +278,8 @@ const SITE = {
       { src: "photos/her/h20.jpg", alt: "Shramishtha at Bibi Ka Maqbara" },
       { src: "photos/her/h21.jpg", alt: "Shramishtha at Bibi Ka Maqbara" },
       { src: "photos/her/h22.jpg", alt: "Shramishtha at Bibi Ka Maqbara" },
+      { src: "photos/her/h23.jpg", alt: "Shramishtha at Kailash" },
+      { src: "photos/her/h24.jpg", alt: "Shramishtha at Kailash" },
     ],
   },
 
