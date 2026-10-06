@@ -189,6 +189,11 @@ const SITE = {
           ],
         },
         {
+          time: "the parking lot",
+          title: "The first hug",
+          note: "Two or three seconds, and the best feeling of the whole day. She was excited and scared, I think, both at once. She was going in for something casual; I was not — her arms over my shoulders, mine under hers and around her back, and I held on tight. It felt like heaven. Second best was the night before, at the dessert place, watching her shy away from sitting across from me. She is so precious.",
+        },
+        {
           time: "Bibi Ka Maqbara",
           title: "The long walk up",
           note: "Up the causeway, and the bench partway along.",
