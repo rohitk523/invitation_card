@@ -285,6 +285,10 @@ const SITE = {
       { src: "photos/her/h22.jpg", alt: "Shramishtha at Bibi Ka Maqbara" },
       { src: "photos/her/h23.jpg", alt: "Shramishtha at Kailash" },
       { src: "photos/her/h24.jpg", alt: "Shramishtha at Kailash" },
+      { src: "photos/her/h25.jpg", alt: "Shramishtha at Daulatabad Fort" },
+      { src: "photos/her/h26.gif", alt: "Shramishtha at Daulatabad Fort" },
+      { src: "photos/her/h27.gif", alt: "Shramishtha at Bibi Ka Maqbara" },
+      { src: "photos/her/h28.gif", alt: "Shramishtha at the lake near Mhaismal" },
     ],
   },
 
