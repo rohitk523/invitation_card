@@ -30,13 +30,27 @@ a { color: #7C2E48; }
   white-space: nowrap;
 }
 .nav-mark .heart { color: #C05B72; }
-.nav-links { display: flex; gap: clamp(10px, 2.5vw, 26px); }
+.nav-links { display: flex; gap: clamp(10px, 2.5vw, 26px); min-width: 0; }
 .nav-links a {
   font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
   text-decoration: none; color: #8A6B74; font-weight: 400;
   white-space: nowrap;
 }
 .nav-links a:hover { color: #7C2E48; }
+.nav-links a[aria-current="page"] { color: #7C2E48; }
+
+/* Ten links do not fit across a phone -- they did not fit at eight. The strip
+   scrolls on its own instead of dragging the whole page sideways with it. */
+@media (max-width: 860px) {
+  .nav { gap: 12px; }
+  .nav-links {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 2px;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+}
 
 /* ---------- hero ---------- */
 .hero {
@@ -316,6 +330,84 @@ a { color: #7C2E48; }
 .letter-from { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 20px; text-align: center; margin: 0 0 6px; position: relative; z-index: 1; }
 .letter-note { font-family: "Caveat", cursive; font-size: 18.5px; color: #8A6B74; text-align: center; margin: 0; position: relative; z-index: 1; }
 
+/* ---------- a page that is not the front one ---------- */
+.page-head {
+  text-align: center;
+  padding: clamp(44px, 8vw, 76px) clamp(18px, 5vw, 48px) clamp(8px, 2vw, 18px);
+  background:
+    radial-gradient(ellipse 90% 70% at 50% -20%, #F7E3DF 0%, rgba(247,227,223,0) 65%),
+    #FBF5EC;
+}
+.page-title {
+  font-family: "Great Vibes", cursive; font-weight: 400;
+  font-size: clamp(42px, 9vw, 76px);
+  color: #7C2E48; margin: 0 0 10px; line-height: 1.15;
+}
+
+/* ---------- promises ---------- */
+.vows { list-style: none; margin: 34px auto 0; padding: 0; display: grid; gap: 20px; max-width: 620px; }
+.vow {
+  background: #fff; border: 1px solid #EFE6D8; border-radius: 14px;
+  padding: clamp(22px, 4vw, 32px);
+  box-shadow: 0 10px 26px rgba(124, 46, 72, .06);
+}
+.vow::before {
+  content: "\201C";
+  display: block; font-family: "Cormorant Garamond", serif;
+  font-size: 46px; line-height: .6; color: #E7C9CF; margin-bottom: 6px;
+}
+.vow-text {
+  font-family: "Cormorant Garamond", serif; font-style: italic;
+  font-size: clamp(18px, 2.6vw, 21px); line-height: 1.65;
+  color: #4E3A42; margin: 0; text-wrap: pretty;
+}
+.vow-when { font-size: 10.5px; letter-spacing: .2em; text-transform: uppercase; color: #B08D57; margin: 16px 0 0; }
+.vows-empty {
+  font-family: "Caveat", cursive; font-size: 20px; color: #8A6B74;
+  text-align: center; list-style: none;
+}
+
+/* ---------- bucket list ---------- */
+.ticks { list-style: none; margin: 30px auto 0; padding: 0; display: grid; gap: 12px; max-width: 620px; }
+.tick {
+  background: #fff; border: 1px solid #EFE6D8; border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 8px 20px rgba(124, 46, 72, .05);
+  transition: opacity .2s ease;
+}
+.tick-row { display: flex; align-items: center; gap: 14px; cursor: pointer; }
+/* The real checkbox stays in the page for the keyboard and for screen readers;
+   the box beside it is the one you see. */
+.tick-input { position: absolute; opacity: 0; width: 0; height: 0; }
+.tick-box {
+  flex: none; width: 24px; height: 24px; border-radius: 7px;
+  border: 1.5px solid #DCC9CE; background: #FDF9F1;
+  display: grid; place-items: center;
+  transition: background .18s ease, border-color .18s ease;
+}
+.tick-box::after {
+  content: ""; width: 11px; height: 6px;
+  border-left: 2px solid #fff; border-bottom: 2px solid #fff;
+  transform: rotate(-45deg) scale(.5); opacity: 0;
+  transition: opacity .18s ease, transform .18s ease;
+  margin-top: -3px;
+}
+.tick-input:checked + .tick-box { background: #7C2E48; border-color: #7C2E48; }
+.tick-input:checked + .tick-box::after { opacity: 1; transform: rotate(-45deg) scale(1); }
+.tick-input:focus-visible + .tick-box { outline: 3px solid #C05B72; outline-offset: 3px; }
+.tick-text {
+  font-family: "Cormorant Garamond", serif; font-weight: 500;
+  font-size: clamp(17px, 2.4vw, 20px); color: #46323A;
+}
+.tick.is-done { opacity: .6; }
+.tick.is-done .tick-text { text-decoration: line-through; text-decoration-color: #C8A9B1; }
+.tick-note { font-family: "Caveat", cursive; font-size: 17px; color: #8A6B74; margin: 6px 0 0 38px; }
+.ticks-empty { font-family: "Caveat", cursive; font-size: 20px; color: #8A6B74; text-align: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tick, .tick-box, .tick-box::after { transition: none; }
+}
+
 /* ---------- footer ---------- */
 .footer { text-align: center; padding: 60px 20px 46px; border-top: 1px solid #EADFCE; }
 .footer-script { font-family: "Great Vibes", cursive; font-size: 34px; color: #7C2E48; margin: 0; }
@@ -451,6 +543,9 @@ body.lb-open { overflow: hidden; }
   /* Anything you can click, scroll or play means nothing on paper. */
   .nav, .petals, .scroll-hint, .countdown, .lb, .print-btn,
   .reel-frame, .nav-out { display: none !important; }
+  .page-head { padding: 0 0 14pt; background: none; }
+  .page-title { font-size: 28pt; }
+  .vow, .tick { box-shadow: none; break-inside: avoid; }
 
   html { scroll-behavior: auto; }
   body { background: #fff; color: #000; font-size: 11pt; }

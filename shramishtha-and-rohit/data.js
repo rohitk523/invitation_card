@@ -310,6 +310,31 @@ const SITE = {
     ],
   },
 
+  /* Promises live here as written, not tidied. Each side fills its own list. */
+  promises: {
+    rohit: [
+      { text: "I Rohit solemnly swears to my girl, my wife I will always always always love her no matter what the situation is. Until death do us apart 💓" },
+    ],
+    shramishtha: [],
+  },
+
+  /* A list to tick off. The ticks themselves are not here -- they are kept in
+     the browser that made them, so this file stays a list of what we want. */
+  bucket: {
+    shramishtha: {
+      line: "Top of her list, and the first thing she said when I asked.",
+      items: [
+        { id: "maldives", text: "Maldives, for the honeymoon" },
+      ],
+    },
+    rohit: {
+      line: "Masai Mara is the one I want. But the first trip we take is wherever she wants to go.",
+      items: [
+        { id: "masai-mara", text: "Masai Mara" },
+      ],
+    },
+  },
+
   songs: [], // the list begins the day the first song is chosen,
 
   usAlbum: [
