@@ -205,6 +205,52 @@ const SITE = {
       ],
     },
     {
+      date: "18 October 2026",
+      title: "Navratri at Karnpura",
+      note: "Had too much fun with my wife-to-be. The ride to her is always exciting, and when I reached and saw her, I fell in love with her a little more — as always.",
+      stops: [
+        {
+          time: "morning",
+          title: "Sunflowers, and an event planner",
+          note: "This time I went with sunflowers, an Oreo Silk, a two-litre water bottle and a rabbit night lamp for her. Then some event planning — we found a near-perfect event planner for our wedding. Still to be decided.",
+        },
+        {
+          time: "1:55 pm",
+          title: "Prahaar",
+          note: "For the second time, I hugged her in the parking lot. In the theatre, as usual, I kissed her hand the whole time. She was looking so irresistible that I bit her, softly, two or three times — not too hard. And I kissed her on the cheek for the first time. I love to play with her hand, and this time she was addicted to it too. She is very comfortable now, I think, but still has a way to go. Then we went on a quest to find her giggle, which had been in my pocket that whole time. I told her to be ready for more of those.",
+        },
+        {
+          time: "afterwards",
+          title: "Swami Samarth Kendra",
+          note: "The kendra near her house. Peaceful — but I could see her remembering her father; she used to go there with him. I believe she won't stop going, as a memory of him. That is one of the things I love about her: when she commits to a thing, she sticks to it, always.",
+        },
+        {
+          time: "at home",
+          title: "Honey coffee, and puris",
+          note: "Honey coffee, and then a puri-chutney feast. I was not hungry, but it was so good I ate a whole bunch of puris.",
+        },
+        {
+          time: "evening",
+          title: "Shopping, on the scooty",
+          note: "A green shirt for me — bayko's favourite, meaning she liked it. Then shopping for her, for Dussehra. She liked one palazzo and thought it would be out of budget. But my budget is her happiness — a two-rupee chocolate, twenty-rupee panipuri or a five-thousand-rupee dress, she needs to know nothing is beyond her. When she wore it, oh my god, she looked like a pretty princess. So we got it. On the scooty she kept a brake on my shoulder, so I would not overspeed or send someone in front of me flying.",
+        },
+        {
+          time: "8:12 pm",
+          title: "Karnpura",
+          note: "Two rides, and for both she was scared to death. But she came, for me. As long as I am alive I will try to lessen her fears of this world — so we are going to be doing dangerous things, because out of the comfort zone is where the fun is. The way she clung to me out of fear was so cute. Also my ulterior motive. Just kidding.",
+          photos: [
+        { src: "photos/album/karnpura-1.jpg", alt: "The two of us on the Ferris wheel at Karnpura" },
+        { src: "photos/day/karnpura-1.jpg", alt: "The Navratri fair at Karnpura, from the top of the Ferris wheel" },
+          ],
+        },
+        {
+          time: "home again",
+          title: "Chai from her hand",
+          note: "Chai made by her for the first time, with adrak and elaichi. It was very good.",
+        },
+      ],
+    },
+    {
       date: "29 January 2027",
       title: "The wedding",
       note: "The day every countdown on this page is running toward.",
@@ -255,6 +301,15 @@ const SITE = {
       poster: "photos/poster-drishyam3.jpg",
       photos: [],
     },
+    {
+      title: "Prahaar",
+      date: "18 October 2026",
+      note: "The second hug, in the parking lot on the way in. Inside, as usual, I kissed her hand the whole time.",
+      poster: "photos/poster-prahaar.jpg",
+      photos: [
+        { src: "photos/movies/prahaar-us.jpg", caption: "The two of us, at Prahaar." },
+      ],
+    },
   ],
 
   // Her own gallery — add photos to photos/her/ and list them here.
@@ -289,6 +344,7 @@ const SITE = {
       { src: "photos/her/h26.gif", alt: "Shramishtha at Daulatabad Fort" },
       { src: "photos/her/h27.gif", alt: "Shramishtha at Bibi Ka Maqbara" },
       { src: "photos/her/h28.gif", alt: "Shramishtha at the lake near Mhaismal" },
+      { src: "photos/her/h29.jpg", alt: "Shramishtha at the cinema" },
     ],
   },
 
@@ -358,5 +414,8 @@ const SITE = {
     { src: "photos/album/garden-1.jpg", alt: "The two of us at Siddharth Garden, the Buddha behind us" },
     { src: "photos/album/maqbara-1.jpg", alt: "The two of us at Bibi Ka Maqbara" },
     { src: "photos/album/maqbara-2.jpg", alt: "The two of us at Bibi Ka Maqbara" },
+    { src: "photos/album/prahaar-1.jpg", alt: "The two of us at the cinema" },
+    { src: "photos/album/karnpura-1.jpg", alt: "The two of us on the Ferris wheel" },
+    { src: "photos/album/karnpura-2.jpg", alt: "The two of us on the Ferris wheel" },
   ],
 };
