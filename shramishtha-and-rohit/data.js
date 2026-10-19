@@ -242,6 +242,11 @@ const SITE = {
         { src: "photos/album/karnpura-1.jpg", alt: "The two of us on the Ferris wheel at Karnpura" },
         { src: "photos/day/karnpura-1.jpg", alt: "The Navratri fair at Karnpura, from the top of the Ferris wheel" },
           ],
+          videos: [
+        { src: "media/day-karnpura-1.mp4", poster: "media/day-karnpura-1-poster.jpg", alt: "On the Ferris wheel at Karnpura" },
+        { src: "media/day-karnpura-2.mp4", poster: "media/day-karnpura-2-poster.jpg", alt: "On the Ferris wheel at Karnpura" },
+        { src: "media/day-karnpura-3.mp4", poster: "media/day-karnpura-3-poster.jpg", alt: "On the Ferris wheel at Karnpura" },
+          ],
         },
         {
           time: "home again",
