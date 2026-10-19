@@ -274,7 +274,7 @@ const SITE = {
       date: "18 October 2026",
       venue: "INOX, Prozone Mall · Sambhajinagar",
       seats: "C-14 & C-15",
-      note: "The second hug, in the parking lot on the way in. Inside, as usual, I kissed her hand the whole time. Afterwards, a quest to find my goggles — which were in my pocket the whole time.",
+      note: "The second hug, in the parking lot on the way in. Inside, as usual, I kissed her hand the whole time — and kissed her on the cheek for the first time. Afterwards, a quest to find my goggles — which were in my pocket the whole time.",
       poster: "photos/poster-prahaar.jpg",
       photos: [
         { src: "photos/movies/prahaar-us.jpg", caption: "The two of us, at Prahaar." },
