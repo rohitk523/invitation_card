@@ -219,6 +219,15 @@ const SITE = {
       ],
     },
     {
+      date: "25 October 2026",
+      title: "Kojagiri Purnima",
+      note: "She wore pink. Kofta at home, and then across to the house her mausi and mausaji are about to move into — mama, mausaji, mausi and the whole baccha gang turned up and it became an afternoon. Somebody put a Sprite in my hand and I drank it with a bad throat, out of respect. We talked about the future properly. She is a different person with people she is comfortable around: louder, telling everyone off about safety. I liked that side of her too. At the cinema that evening, out of nowhere and with everything she had, she said she loves me, her voice cracking on it — I know what it cost her to go first — and then hid her face in my arm the way she always does. Chai from her hand afterwards, and a KitKat she had been keeping for me; dosa and watermelon juice at Kittu Appe, pineapple sheera carried home for her mother. Saying goodbye did not hurt until later, and then it did. Mammi had the pooja ready when I got home, the moon caught in a bowl of milk and then the milk itself — but I had already met my chand that day. Most couples wait until after the wedding to live like this. We did not wait: whatever they get to afterwards, we are doing first, and more of it.",
+      photos: [
+        { src: "photos/day/kojagiri-pooja.jpg", alt: "The Kojagiri pooja at home" },
+        { src: "photos/album/kojagiri-6.jpg", alt: "The two of us on Kojagiri Purnima" },
+      ],
+    },
+    {
       date: "29 January 2027",
       title: "The wedding",
       note: "The day every countdown on this page is running toward.",
@@ -281,6 +290,13 @@ const SITE = {
         { src: "photos/movies/prahaar-ticket.jpg", caption: "Seats C-14 and C-15." },
       ],
     },
+    {
+      title: "Udta Teer",
+      date: "25 October 2026",
+      note: "Funny. Also where I learned not to book recliners when she is with me — the seats put a gap between us that neither of us wanted, and I blame the furniture entirely. She held on to my arm through most of it anyway.",
+      poster: "photos/poster-udta-teer.jpg",
+      photos: [],
+    },
   ],
 
   // Her own gallery — add photos to photos/her/ and list them here.
@@ -316,6 +332,8 @@ const SITE = {
       { src: "photos/her/h27.gif", alt: "Shramishtha at Bibi Ka Maqbara" },
       { src: "photos/her/h28.gif", alt: "Shramishtha at the lake near Mhaismal" },
       { src: "photos/her/h29.jpg", alt: "Shramishtha at the cinema" },
+      { src: "photos/her/h30.jpg", alt: "Shramishtha in the Dussehra outfit" },
+      { src: "photos/her/h31.jpg", alt: "Shramishtha in the Dussehra outfit" },
     ],
   },
 
@@ -388,5 +406,11 @@ const SITE = {
     { src: "photos/album/prahaar-1.jpg", alt: "The two of us at the cinema" },
     { src: "photos/album/karnpura-1.jpg", alt: "The two of us on the Ferris wheel" },
     { src: "photos/album/karnpura-2.jpg", alt: "The two of us on the Ferris wheel" },
+    { src: "photos/album/kojagiri-1.jpg", alt: "The two of us on Kojagiri Purnima" },
+    { src: "photos/album/kojagiri-2.jpg", alt: "The two of us on Kojagiri Purnima" },
+    { src: "photos/album/kojagiri-3.jpg", alt: "The two of us on Kojagiri Purnima" },
+    { src: "photos/album/kojagiri-4.jpg", alt: "The two of us on Kojagiri Purnima" },
+    { src: "photos/album/kojagiri-5.jpg", alt: "The two of us on Kojagiri Purnima" },
+    { src: "photos/album/kojagiri-6.jpg", alt: "The two of us on Kojagiri Purnima" },
   ],
 };
