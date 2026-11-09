@@ -228,6 +228,26 @@ const SITE = {
       ],
     },
     {
+      date: "7 November 2026",
+      title: "The day before Diwali",
+      note: "[Story to come] A temple visit together, and an afternoon at the cinema for Ramayana.",
+      photos: [
+        { src: "photos/day/diwali-eve-temple-1.jpg", alt: "At the temple, the day before Diwali" },
+        { src: "photos/day/diwali-eve-temple-2.jpg", alt: "Temple selfie, the day before Diwali" },
+        { src: "photos/day/diwali-eve-theatre.jpg", alt: "At the cinema for Ramayana" },
+      ],
+    },
+    {
+      date: "8 November 2026",
+      title: "Diwali",
+      note: "[Story to come] Festive lights and celebrations — and bayko in her stunning red and gold lehenga.",
+      photos: [
+        { src: "photos/day/diwali-1.jpg", alt: "Shramishtha in her Diwali red lehenga" },
+        { src: "photos/day/diwali-2.jpg", alt: "Shramishtha on the balcony" },
+        { src: "photos/day/diwali-3.jpg", alt: "Shramishtha's Diwali smile" },
+      ],
+    },
+    {
       date: "29 January 2027",
       title: "The wedding",
       note: "The day every countdown on this page is running toward.",
@@ -297,6 +317,20 @@ const SITE = {
       poster: "photos/poster-udta-teer.jpg",
       photos: [],
     },
+    {
+      title: "Ramayana",
+      date: "7 November 2026",
+      venue: "Anjali Ratnadeep Cinema · Sambhajinagar · Screen 3",
+      seats: "Sofa C-3 & C-4",
+      note: "[Story to come] Watched Ramayana together on the sofa seats, right before Diwali.",
+      poster: "photos/poster-ramayana.jpg",
+      photos: [
+        { src: "photos/movies/ramayana-us.jpg", caption: "The two of us, at Ramayana." },
+        { src: "photos/movies/ramayana-her.jpg", caption: "Shramishtha at Anjali Ratnadeep Cinema." },
+        { src: "photos/movies/ramayana-glasses.jpg", caption: "Both of us in our glasses." },
+        { src: "photos/movies/ramayana-ticket.jpg", caption: "Seats Sofa C-3 & C-4." },
+      ],
+    },
   ],
 
   // Her own gallery — add photos to photos/her/ and list them here.
@@ -334,6 +368,15 @@ const SITE = {
       { src: "photos/her/h29.jpg", alt: "Shramishtha at the cinema" },
       { src: "photos/her/h30.jpg", alt: "Shramishtha in the Dussehra outfit" },
       { src: "photos/her/h31.jpg", alt: "Shramishtha in the Dussehra outfit" },
+      { src: "photos/her/h32.jpg", alt: "Shramishtha in the red lehenga" },
+      { src: "photos/her/h33.jpg", alt: "Shramishtha in the Diwali red lehenga" },
+      { src: "photos/her/h34.jpg", alt: "Shramishtha" },
+      { src: "photos/her/h35.jpg", alt: "Shramishtha on the balcony" },
+      { src: "photos/her/h36.jpg", alt: "Shramishtha and the engagement ring" },
+      { src: "photos/her/h37.jpg", alt: "Shramishtha in the doorway" },
+      { src: "photos/her/h38.jpg", alt: "Shramishtha" },
+      { src: "photos/her/h39.jpg", alt: "Shramishtha at the cinema" },
+      { src: "photos/her/h40.jpg", alt: "Shramishtha in her glasses at the cinema" },
     ],
   },
 
@@ -412,5 +455,10 @@ const SITE = {
     { src: "photos/album/kojagiri-4.jpg", alt: "The two of us on Kojagiri Purnima" },
     { src: "photos/album/kojagiri-5.jpg", alt: "The two of us on Kojagiri Purnima" },
     { src: "photos/album/kojagiri-6.jpg", alt: "The two of us on Kojagiri Purnima" },
+    { src: "photos/album/diwali-eve-1.jpg", alt: "The two of us at the temple, the day before Diwali" },
+    { src: "photos/album/diwali-eve-2.jpg", alt: "The two of us at the cinema, watching Ramayana" },
+    { src: "photos/album/diwali-eve-3.jpg", alt: "The two of us in our glasses at the cinema" },
+    { src: "photos/album/diwali-eve-4.jpg", alt: "The two of us at the temple shrine" },
+    { src: "photos/album/diwali-eve-5.jpg", alt: "The two of us in the cinema sofa seats" },
   ],
 };
