@@ -228,9 +228,14 @@ const SITE = {
       ],
     },
     {
+      date: "1–2 November 2026",
+      title: "Shopping in Pune, and our first kiss",
+      note: "Travelled with Mom and my sister to her house, and from there to Pune for wedding shopping.\n\nAfter we reached, I took her out on the scooty to get milk — an excuse to steal some time alone, show her around the locality, and ride past the malls. She held on tight to me the entire way, wonderfully shy, making me fall for her all over again.\n\nThe first shopping day was exhausting and difficult, but talking through it afterwards only brought us closer and built even deeper trust between us. That night, on the 1st of November, we had our first kiss. She was leaning against my chest, her eyes telling me it was alright, and I gathered all the courage I had. It was pure magic. One kiss turned into two, three, four, five, six in quick succession, talking between them until exhaustion finally won.\n\nThe next day's shopping went so much better — except for the sangeet dress, we found everything we needed. And that second night was the most memorable night of my life with her. We let go of all the hesitation and orthodox boundaries, held each other close, and stayed deeply lost in each other.\n\nA small misunderstanding followed later, but honest communication sorted it out. That kind of communication is everything in a relationship, and having that with her made me choose us all over again.",
+    },
+    {
       date: "7 November 2026",
       title: "The day before Diwali",
-      note: "[Story to come] A temple visit together, and an afternoon at the cinema for Ramayana.",
+      note: "Visited her home for the weekend. The first treat waiting for me was Diwali shankarpale made by her own hands.\n\nA peaceful temple visit together, followed by an afternoon at Anjali Cinema for Ramayana. The film was easily my least favourite we've watched — I quietly slept through the second half — but being seated next to her made the whole afternoon worthwhile.\n\nAfterwards, we went for softy ice cream. She chose Nutella choco chip and I got KitKat fudge. One taste told me she wasn't enjoying hers, but she loved the KitKat, so I gave her mine — a trade I will happily make for the rest of our lives.\n\nAn hour at Mama's place for faral and coffee made by her, then back to her home for more faral and another cup of her chai before heading back. A perfect day before the festival.",
       photos: [
         { src: "photos/day/diwali-eve-temple-1.jpg", alt: "At the temple, the day before Diwali" },
         { src: "photos/day/diwali-eve-temple-2.jpg", alt: "Temple selfie, the day before Diwali" },
@@ -240,7 +245,7 @@ const SITE = {
     {
       date: "8 November 2026",
       title: "Diwali",
-      note: "[Story to come] Festive lights and celebrations — and bayko in her stunning red and gold lehenga.",
+      note: "Diwali day, celebrated at our respective homes. I asked her to send me pictures from her celebration, and when they came through, she took my breath away — looking stunning in her red and gold lehenga, wearing her sweetest smile and our engagement ring.\n\nA festival of lights, made infinitely brighter by my favourite person.",
       photos: [
         { src: "photos/day/diwali-1.jpg", alt: "Shramishtha in her Diwali red lehenga" },
         { src: "photos/day/diwali-2.jpg", alt: "Shramishtha on the balcony" },
@@ -322,7 +327,7 @@ const SITE = {
       date: "7 November 2026",
       venue: "Anjali Ratnadeep Cinema · Sambhajinagar · Screen 3",
       seats: "Sofa C-3 & C-4",
-      note: "[Story to come] Watched Ramayana together on the sofa seats, right before Diwali.",
+      note: "Watched from the sofa seats, Sofa C-3 and C-4. Easily my least favourite film we've watched together — I slept through the second half. The best part of the movie date was right after: softy ice cream. She had Nutella choco chip and I had KitKat fudge; she wasn't fond of hers, but loved mine, so I immediately traded with her. As long as she is happy, I will always do that.",
       poster: "photos/poster-ramayana.jpg",
       photos: [
         { src: "photos/movies/ramayana-us.jpg", caption: "The two of us, at Ramayana." },
