@@ -253,6 +253,14 @@ const SITE = {
       ],
     },
     {
+      date: "22 November 2026",
+      title: "Booking the events, and lifting her for the first time",
+      note: "Fifteen days since we last met, and I had missed her so much.\n\nWe went to Easy Events by Mithin Chavan to finalise the wedding events and got everything we needed. A little costly, but it's a one-time thing, so no worries there.\n\nBack at her home for lunch, the house was being painted for the wedding, so we sat on the first floor. It had been a long time, and there she was beside me, getting shy as always. I held her hand and kissed it, and then we kissed. I still get goosebumps thinking of that moment. We hugged for twenty minutes or more without letting go, and this close she could hold my gaze. She looked so beautiful.\n\nThen I lifted her for the first time. I think she wasn't sure I could, but I did, swirled her around and held her up there. She was so light.\n\nThen we went downstairs like nothing had happened and left for the movies.\n\nAfter we got back I had to head home early, which she didn't like. I could tell she was upset. I had dinner and we talked some more. A great day: as long as I spent every minute of it with her, I'm happy.\n\nIf any of our children are reading this, remember: dada loved momma very much. We're getting married, after all!",
+      photos: [
+        { src: "photos/day/maitreyaa-day-theatre.jpg", alt: "The two of us at INOX Prozone" },
+      ],
+    },
+    {
       date: "29 January 2027",
       title: "The wedding",
       note: "The day every countdown on this page is running toward.",
@@ -334,6 +342,18 @@ const SITE = {
         { src: "photos/movies/ramayana-her.jpg", caption: "Shramishtha at Anjali Ratnadeep Cinema." },
         { src: "photos/movies/ramayana-glasses.jpg", caption: "Both of us in our glasses." },
         { src: "photos/movies/ramayana-ticket.jpg", caption: "Seats Sofa C-3 & C-4." },
+      ],
+    },
+    {
+      title: "Maitreyaa",
+      date: "22 November 2026",
+      venue: "INOX Prozone Mall · Chikalthana, Sambhajinagar · Screen 365",
+      seats: "B-5 & B-6",
+      note: "A bad film, very bad. The first half ran at nearly 10 fps, which was the theatre's fault and not the movie's, but the movie wasn't good either, and the ending was most definitely bad. She leaned on me the whole way through, and that felt so comfortable I wanted time to stop right there.",
+      poster: "photos/poster-maitreyaa.jpg",
+      photos: [
+        { src: "photos/movies/maitreyaa-us.jpg", caption: "The two of us, at Maitreyaa." },
+        { src: "photos/movies/maitreyaa-ticket.jpg", caption: "Seats B-5 & B-6." },
       ],
     },
   ],
@@ -465,5 +485,7 @@ const SITE = {
     { src: "photos/album/diwali-eve-3.jpg", alt: "The two of us in our glasses at the cinema" },
     { src: "photos/album/diwali-eve-4.jpg", alt: "The two of us at the temple shrine" },
     { src: "photos/album/diwali-eve-5.jpg", alt: "The two of us in the cinema sofa seats" },
+    { src: "photos/album/maitreyaa-1.jpg", alt: "The two of us at INOX Prozone" },
+    { src: "photos/album/maitreyaa-2.jpg", alt: "The two of us at INOX Prozone" },
   ],
 };
