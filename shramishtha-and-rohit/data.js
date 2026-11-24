@@ -402,6 +402,13 @@ const SITE = {
       { src: "photos/her/h38.jpg", alt: "Shramishtha" },
       { src: "photos/her/h39.jpg", alt: "Shramishtha at the cinema" },
       { src: "photos/her/h40.jpg", alt: "Shramishtha in her glasses at the cinema" },
+      { src: "photos/her/h41.jpg", alt: "Shramishtha on a video call" },
+      { src: "photos/her/h42.jpg", alt: "Shramishtha on a video call" },
+      { src: "photos/her/h43.jpg", alt: "Shramishtha on a video call" },
+      { src: "photos/her/h44.jpg", alt: "Shramishtha on a video call" },
+      { src: "photos/her/h45.jpg", alt: "Shramishtha on a video call" },
+      { src: "photos/her/h46.jpg", alt: "Shramishtha on a video call" },
+      { src: "photos/her/h47.jpg", alt: "Shramishtha on a video call" },
     ],
   },
 
